@@ -1,0 +1,116 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+@function first($list) { @return nth($list, 1); }
+@mixin gradient($direction, $list) {
+  background: first($list);
+  background: -webkit-linear-gradient($direction, $list);
+  background: -moz-linear-gradient($direction, $list);
+  background: -o-linear-gradient($direction, $list);
+  background: -ms-linear-gradient($direction, $list);
+  background: linear-gradient($direction, $list);
+}
+$gradientcolors: #00b176,#00b176, #00b17675;
+
+
+body {
+  font-family: metropolisregular;
+  text-align: justify;
+}
+
+.entete { font-size: 3rem; margin: 20px 0px; text-align: center; }
+@media (max-width: 650px) { .entete { font-size: 2rem; } }
+.entete img { max-width: 100%; }
+.alternative        { font-family: de_valenciaregular; color: #00b176; }
+.valeurs            { font-family: leckerlioneregular; color: #e4002b }
+.ecologique         { font-family: leckerlioneregular; color: #00b176 }
+.pour               { font-family: yellowtailregular; color: #00b176; padding-right: 15px; }
+.antibes, .juan     { font-family: yellowtailregular; color: #e4002b;  }
+.entete .antibes    { font-size: 5rem; }
+@media (max-width: 650px) { .entete .antibes { font-size: 3rem; } }
+
+.contenu {
+  position: absolute;
+  // left: 25%;
+  // left: 10%;
+  // padding-right: 10%;
+  font-size: 1.3rem;
+  @media (max-width: 650px) {
+    position: unset;
+    left: unset;
+    padding-left: 10%;
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+.titre { font-size: 5rem; }
+@media (max-width: 650px) { .titre { font-size: 2.5rem; } }
+
+.surencadré {
+  text-align: center;
+  padding: 0px !important;
+  /*background: #00b176;*/
+  @include gradient(to bottom, $gradientcolors);
+  // background-image: linear-gradient(to bottom, #00b176,#00b176, #00b17675);
+}
+
+.encadré {
+  display: inline-block;
+  width: 75%;
+  max-width: 1000px;
+  text-align: justify;
+  color: white;
+  @media (max-width: 650px) { font-size: 1.1rem; }
+  padding: 0px !important;
+}
+
+.highlight {
+  color: #e4002b; 
+  font-family: leckerlioneregular;  
+}
+
+
+.signertexte .titre {
+  font-family: yellowtailregular;
+  color: #e4002b;
+  text-align: center;
+  width: 100%;
+}
+
+.vosinfos {
+  margin-top: 30px;
+  $list: #00b176,#00b176, #00b17675;
+  @include gradient(to bottom, $gradientcolors);
+  padding: 10px 25px;
+
+  input[type=text], input[type=email], input[type=tel]  {
+    width: 100%;
+    padding-left: 10px;
+    border-color: #00b17675;
+    border-width: 1px;
+    font-family: Arial;
+  }
+  button, input[type=submit] {
+    font-family: de_valenciaregular;
+    color: #e4002b;
+    font-size: 6rem;
+    @media (max-width: 650px) { font-size: 3rem; }
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
+ button:hover { font-weight: bold; }
+  .row {
+    margin-top: 14px;
+    line-height: 2;
+  }
+  .commentaire { padding: 0px 25px; width: 100%; }
+  textarea.commentaire  {
+    box-shadow: 4px 4px 1px #00b176;
+    padding: 5px 20px;
+    font-family: Arial;
+  }
+}
+
