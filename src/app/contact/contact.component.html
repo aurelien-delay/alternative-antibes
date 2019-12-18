@@ -1,0 +1,51 @@
+<div class="container">
+<form #f = "ngForm" (ngSubmit)="createSignataire(f)">
+  <div class="contact">
+    <div class="">
+      <div class="row">
+        <div class="col">
+          <p class="titre">Contactez nous</p>
+          <p class="explications">N'hésitez pas à participer à notre démarche citoyenne !</p>
+        </div>
+      </div>
+    </div>
+    <div class="vosinfos">
+      <div class="row">
+        <div class="col-6"><input class="prenom" type="text" placeholder="Pr&eacute;nom" name="prenom" ngModel required></div>
+        <div class="col-6"><input class="nom" type="text" placeholder="Nom" name="nom" ngModel required></div>
+      </div>
+
+      <div class="row">
+        <div class="col-12"><input class="ville" type="text" placeholder="Ville de r&eacute;sidence" name="ville" ngModel></div>
+      </div>
+
+      <div class="row">
+          <div class="col-6"><input class="mail" type="email" placeholder="Email" name="email" ngModel></div>
+          <div class="col-6"><input class="telephone" type="tel" placeholder="Num&eacute;ro" name="telephone" ngModel></div>
+      </div>
+
+      <div class="row">
+        <div class="col-12"><textarea class="propositions" placeholder="Vos propositions" name="propositions" ngModel></textarea></div>
+      </div>
+
+      <div class="row">
+        <div class="col-12"><textarea class="commentaire" placeholder="Votre message" name="commentaire" ngModel></textarea></div>
+      </div>
+
+      <div class="">
+        <input type="submit"  value="Envoyer">
+      </div>
+    </div>
+    <div class="contactautres">
+      <div class="row courrier">
+        <div class="col-12 col-md-3 moyen">par courrier</div>
+        <div class="col-12 col-md-9">Alternative Antibes Juan-les-Pins, 10 rue Pasteur 06600 Antibes</div>
+      </div>
+      <div class="row telephone">
+        <div class="col-12 col-md-3 moyen">par téléphone</div>
+        <div class="col-12 col-md-9">...</div>
+      </div>
+    </div>
+  </div>
+</form>
+</div>

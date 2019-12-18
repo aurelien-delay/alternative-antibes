@@ -9,6 +9,7 @@ import { LateralComponent } from './lateral/lateral.component';
 import { PresseComponent } from './presse/presse.component';
 import { AteliersComponent } from './ateliers/ateliers.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AccueilComponent } from './accueil/accueil.component';
     LateralComponent,
     PresseComponent,
     AteliersComponent,
-    AccueilComponent
+    AccueilComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -21,6 +21,7 @@
 }
 
 .axes {
+  h1, .titre { @media (max-width: 650px) { font-size: 4rem; } }
   .encadré { margin-bottom: 30px; }
   .axe {
     font-size: 2rem;

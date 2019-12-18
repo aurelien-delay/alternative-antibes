@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
+$vert: #00b176;
+$rouge: #e4002b;
+$jaune: #ffc72c;
+$violet: #926ebf;
+$bleu: #009ec0;
+$orange: #ff8200;
 
 @function first($list) { @return nth($list, 1); }
 @mixin gradient($direction, $list) {
@@ -24,6 +30,8 @@ body {
   text-align: justify;
 }
 
+input[type="submit"]:hover { text-decoration: underline; }
+
 .entete { 
   font-size: 3rem; 
   margin: 20px 0px; 
@@ -40,7 +48,7 @@ body {
 @media (max-width: 650px) { .entete .antibes { font-size: 3rem; } }
 
 .contenu {
-  position: absolute;
+  // position: absolute;
   // left: 25%;
   // left: 10%;
   // padding-right: 10%;
@@ -61,15 +69,13 @@ body {
   text-align: center;
   width: 100%;
   padding-top: 20px;
-  // @media (max-width: 650px) { font-size: 2.5rem; }
+  @media (max-width: 650px) { font-size: 2.5rem; }
 }
 
 .surencadré {
   text-align: center;
   padding: 0px !important;
-  /*background: #00b176;*/
   @include gradient(to bottom, $gradientcolors_vert); // vert par defaut
-  // background-image: linear-gradient(to bottom, #00b176,#00b176, #00b17675);
   &.vert { @include gradient(to bottom, $gradientcolors_vert); }
   &.rouge { @include gradient(to bottom, $gradientcolors_rouge); }
   &.bleu { @include gradient(to bottom, $gradientcolors_bleu); }
@@ -94,7 +100,7 @@ body {
 }
 
 
-.signertexte .titre {
+.contact .titre {
   font-family: yellowtailregular;
   color: #e4002b;
   text-align: center;
@@ -128,11 +134,17 @@ body {
     margin-top: 14px;
     line-height: 2;
   }
-  .commentaire { padding: 0px 25px; width: 100%; }
-  textarea.commentaire  {
+  textarea  {
     box-shadow: 4px 4px 1px #00b176;
     padding: 5px 20px;
     font-family: Arial;
+    padding: 0px 25px; width: 100%;
   }
+}
+
+form {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
