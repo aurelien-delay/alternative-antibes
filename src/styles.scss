@@ -11,7 +11,12 @@
   background: -ms-linear-gradient($direction, $list);
   background: linear-gradient($direction, $list);
 }
-$gradientcolors: #00b176,#00b176, #00b17675;
+$gradientcolors_vert: #00b176,#00b176, #00b17675;
+$gradientcolors_rouge: #e4002b,#e4002b, #e4002b75;
+$gradientcolors_jaune: #ffc72c,#ffc72c, #ffc72c75;
+$gradientcolors_violet: #926ebf,#926ebf, #926ebf75;
+$gradientcolors_bleu: #009ec0,#009ec0, #009ec075;
+$gradientcolors_orange: #ff8200,#ff8200, #ff820075;
 
 
 body {
@@ -19,8 +24,12 @@ body {
   text-align: justify;
 }
 
-.entete { font-size: 3rem; margin: 20px 0px; text-align: center; }
-@media (max-width: 650px) { .entete { font-size: 2rem; } }
+.entete { 
+  font-size: 3rem; 
+  margin: 20px 0px; 
+  text-align: center; 
+  @media (max-width: 650px) { font-size: 2rem; }
+}
 .entete img { max-width: 100%; }
 .alternative        { font-family: de_valenciaregular; color: #00b176; }
 .valeurs            { font-family: leckerlioneregular; color: #e4002b }
@@ -38,22 +47,35 @@ body {
   font-size: 1.3rem;
   @media (max-width: 650px) {
     position: unset;
-    left: unset;
-    padding-left: 10%;
+    // left: unset;
+    // padding-left: 10%;
     max-width: 100%;
     font-size: 0.9rem;
   }
 }
 
-.titre { font-size: 5rem; }
-@media (max-width: 650px) { .titre { font-size: 2.5rem; } }
+.titre, h1 { 
+  font-size: 5rem; 
+  font-family: de_valenciaregular; 
+  color: black;
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+  // @media (max-width: 650px) { font-size: 2.5rem; }
+}
 
 .surencadré {
   text-align: center;
   padding: 0px !important;
   /*background: #00b176;*/
-  @include gradient(to bottom, $gradientcolors);
+  @include gradient(to bottom, $gradientcolors_vert); // vert par defaut
   // background-image: linear-gradient(to bottom, #00b176,#00b176, #00b17675);
+  &.vert { @include gradient(to bottom, $gradientcolors_vert); }
+  &.rouge { @include gradient(to bottom, $gradientcolors_rouge); }
+  &.bleu { @include gradient(to bottom, $gradientcolors_bleu); }
+  &.jaune { @include gradient(to bottom, $gradientcolors_jaune); }
+  &.orange { @include gradient(to bottom, $gradientcolors_orange); }
+  &.violet { @include gradient(to bottom, $gradientcolors_violet); }
 }
 
 .encadré {
@@ -82,7 +104,7 @@ body {
 .vosinfos {
   margin-top: 30px;
   $list: #00b176,#00b176, #00b17675;
-  @include gradient(to bottom, $gradientcolors);
+  @include gradient(to bottom, $gradientcolors_vert);
   padding: 10px 25px;
 
   input[type=text], input[type=email], input[type=tel]  {

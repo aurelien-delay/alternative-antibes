@@ -1,8 +1,9 @@
 .texterassemblement {
   
   div {
-  // font-size: 1.3rem;
-  padding: 10px 150px;
+    @media (max-width: 650px) { padding: 10px 20px; }
+    @media (max-width: 1000px) { padding: 10px 50px; }
+    padding: 10px 150px;
   }
 
   p { padding: 10px 0px; margin-bottom: 0px; }
@@ -17,6 +18,38 @@
 .methode .axes {
   color: #00b176;
   font-weight: bold;
+}
+
+.axes {
+  .encadré { margin-bottom: 30px; }
+  .axe {
+    font-size: 2rem;
+    text-align: left;
+    padding-left: 10%;
+    padding-top: 20px;
+    color: white;
+    @media (max-width: 650px) { 
+      text-align: center;
+      padding-left: unset;
+      }
+  }
+
+  ul { list-style: none; padding: 0; margin: 0; } // retirer les bullet points par défaut
+  li { padding-left: 16px; }
+  li:before {
+    content: "•";
+    padding-right: 8px;
+  }
+  li.suite {
+    padding-top: 10px;
+    font-size: 1.2rem;
+    &:before {
+      content: "▶";
+      padding-right: 8px;
+      font-size: 1rem;
+    }
+  }
+
 }
 
 /*
