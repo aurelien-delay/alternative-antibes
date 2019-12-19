@@ -7,7 +7,10 @@
     <p class="juan">Juan-les-Pins</p>
     -->
   </a>
-  <div class="liens">
-    <a [routerLink]="['/presse']"><p>Coin Presse</p></a>
+  <div class="liens container-fluid">
+    <div class="row">
+      <div class="col-6 col-md-6"><a [routerLink]="['/contact']"><p>Contactez-nous</p></a></div>
+      <div class="col-6 col-md-6"><a [routerLink]="['/presse']"><p>Coin Presse</p></a></div>
+    </div>
   </div>
 </div>

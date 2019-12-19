@@ -1,5 +1,5 @@
 <div class="container">
-<form #f = "ngForm" (ngSubmit)="createSignataire(f)">
+<form #f = "ngForm" (ngSubmit)="envoyer(f)">
   <div class="contact">
     <div class="">
       <div class="row">
@@ -9,10 +9,18 @@
         </div>
       </div>
     </div>
+    <div class="surencadré jaune" *ngIf="sent">
+      <div class="row">
+        <div class="col">
+          <p class="titre">Merci</p>
+          <p class="explications">Votre message a été envoyé avec succés. A bientôt !</p>
+        </div>
+      </div>
+    </div>
     <div class="vosinfos">
       <div class="row">
-        <div class="col-6"><input class="prenom" type="text" placeholder="Pr&eacute;nom" name="prenom" ngModel required></div>
-        <div class="col-6"><input class="nom" type="text" placeholder="Nom" name="nom" ngModel required></div>
+        <div class="col-6"><input [ngClass]="{'is-invalid': badnom=='true'}" class="prenom" type="text" placeholder="Pr&eacute;nom" name="prenom" ngModel required></div>
+        <div class="col-6"><input [ngClass]="{'is-invalid': badprenom==true}" class="nom" type="text" placeholder="Nom" name="nom" ngModel required></div>
       </div>
 
       <div class="row">

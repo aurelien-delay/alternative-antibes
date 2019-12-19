@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { Signataire } from '../signataire';
+import { ContactInfo } from '../contactinfo';
 
 @Component({
   selector: 'app-accueil',
@@ -13,11 +13,11 @@ export class AccueilComponent implements OnInit {
   ngOnInit() {
   }
 
-  createSignataire(form) {
+  envoyer(form) {
     console.log("form:", form);
     if (form.status==="VALID") {
-      this.apiService.createSignataire(form.value).subscribe((signataire: Signataire)=>{
-        console.log("Signature ajoutée", signataire);
+      this.apiService.envoyer(form.value).subscribe((contactinfo: ContactInfo)=>{
+        console.log("Signature ajoutée", contactinfo);
       });
     }
   }

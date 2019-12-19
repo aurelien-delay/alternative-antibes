@@ -1,16 +1,13 @@
+$vert: #00b176;
+$rouge: #e4002b;
+$jaune: #ffc72c;
+$violet: #926ebf;
+$bleu: #009ec0;
+$orange: #ff8200;
+
 .lateral {
-  background-color: white;
-  font-size: 3vw;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  left: 0;
-  /*
-  @media (max-width: 650px) {
-    width: 100%;
-    position: unset; left: unset;
-  }
-  */
+  font-size: 2rem;
+  @media (max-width: 650px) { font-size: 1rem; }
 
   img { width: 100%; }
   // @media (max-width: 650px) { .accueil, img { width: 0px; height: 0px; visibility: hidden; display: block; } }
@@ -23,9 +20,9 @@
 
 .lateral .liens {
   font-family: de_valenciaregular; 
-  color: #e4002b;
+  color: $rouge;
   padding-top: 20px;
-  text-align: right;
+  // text-align: right;
 }
 
 .lateral .liens p { padding: 10px 0px; }
