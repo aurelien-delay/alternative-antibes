@@ -1,4 +1,6 @@
 .presse {
+  text-align: center;
+  .source { color: white; }
 
   img.extraitpresse {
     max-width: 1000px;
@@ -7,6 +9,10 @@
 
   .date {
     padding-left: 10px;
+  }
+
+  .article {
+    margin-bottom: 50px;
   }
 
 }

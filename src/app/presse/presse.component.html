@@ -3,8 +3,8 @@
     <h1>Coin Presse</h1>
   </div>
   <!-- Nice Matin 30 aout 2019-->
-  <div class="article">
-    <p class="surencadré bleu source">Nice Matin<span class="date">30 Aout 2019</span></p>
-    <img class="extraitpresse" src="assets/presse/nicematin_30aout2019.jpg" alt="Le rassemblement de la Gauche en vert et contre... la droite">
+  <div *ngFor="let article of articles" class="article">
+    <p class="surencadré bleu source">{{article.journal}}<span class="date">{{article.date}}</span></p>
+    <img class="extraitpresse" src="assets/presse/{{article.image}}" alt={{article.alt}}>
   </div>
 </div>
