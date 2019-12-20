@@ -4,12 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
 import { PresseComponent } from './presse/presse.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProgrammeComponent } from './programme/programme.component';
 
 const routes: Routes = [
   { path: '', component: AccueilComponent, },
   { path: 'accueil', component: AccueilComponent, },
   { path: 'presse', component: PresseComponent, },
   { path: 'contact', component: ContactComponent, },
+  { path: 'programme', component: ProgrammeComponent, },
 ];
 
 @NgModule({

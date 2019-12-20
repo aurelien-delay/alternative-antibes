@@ -20,37 +20,12 @@
   font-weight: bold;
 }
 
-.axes {
-  h1, .titre { @media (max-width: 650px) { font-size: 4rem; } }
-  .encadré { margin-bottom: 30px; }
-  .axe {
-    font-size: 2rem;
-    text-align: left;
-    padding-left: 10%;
-    padding-top: 20px;
-    color: white;
-    @media (max-width: 650px) { 
-      text-align: center;
-      padding-left: unset;
-      }
+.accueil {
+  h1, .titre { 
+    font-family: de_valenciaregular; 
+    color: black;
+    @media (max-width: 650px) { font-size: 4rem; } 
   }
-
-  ul { list-style: none; padding: 0; margin: 0; } // retirer les bullet points par défaut
-  li { padding-left: 16px; }
-  li:before {
-    content: "•";
-    padding-right: 8px;
-  }
-  li.suite {
-    padding-top: 10px;
-    font-size: 1.2rem;
-    &:before {
-      content: "▶";
-      padding-right: 8px;
-      font-size: 1rem;
-    }
-  }
-
 }
 
 /*

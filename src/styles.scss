@@ -17,12 +17,12 @@ $orange: #ff8200;
   background: -ms-linear-gradient($direction, $list);
   background: linear-gradient($direction, $list);
 }
-$gradientcolors_vert: #00b176,#00b176, #00b17675;
-$gradientcolors_rouge: $rouge,$rouge, #e4002b75;
-$gradientcolors_jaune: #ffc72c,#ffc72c, #ffc72c75;
-$gradientcolors_violet: #926ebf,#926ebf, #926ebf75;
-$gradientcolors_bleu: #009ec0,#009ec0, #009ec075;
-$gradientcolors_orange: #ff8200,#ff8200, #ff820075;
+$gradientcolors_vert: $vert,$vert, RGB(0, 177, 118, 60%);
+$gradientcolors_rouge: $rouge,$rouge, RGB(228, 0, 43, 60%);
+$gradientcolors_jaune: $jaune,$jaune, RGB(255, 199, 44, 60%);
+$gradientcolors_violet: $violet,$violet, RGB(146, 110, 191, 60%);
+$gradientcolors_bleu: $bleu,$bleu, RGB(0, 158, 192, 60%);
+$gradientcolors_orange: $orange,$orange, RGB(255, 130, 0, 60%);
 
 
 body {
@@ -39,10 +39,10 @@ input[type="submit"]:hover { text-decoration: underline; }
   @media (max-width: 650px) { font-size: 2rem; }
 }
 .entete img { max-width: 100%; }
-.alternative        { font-family: de_valenciaregular; color: #00b176; }
+.alternative        { font-family: de_valenciaregular; color: $vert; }
 .valeurs            { font-family: leckerlioneregular; color: $rouge }
-.ecologique         { font-family: leckerlioneregular; color: #00b176 }
-.pour               { font-family: yellowtailregular; color: #00b176; padding-right: 15px; }
+.ecologique         { font-family: leckerlioneregular; color: $vert }
+.pour               { font-family: yellowtailregular; color: $vert; padding-right: 15px; }
 .antibes, .juan     { font-family: yellowtailregular; color: $rouge;  }
 .entete .antibes    { font-size: 5rem; }
 @media (max-width: 650px) { .entete .antibes { font-size: 3rem; } }
@@ -63,9 +63,9 @@ input[type="submit"]:hover { text-decoration: underline; }
 }
 
 .titre, h1 { 
-  font-size: 5rem; 
-  font-family: de_valenciaregular; 
-  color: black;
+  font-size: 5rem;
+  font-family: yellowtailregular;
+  color: $rouge;
   text-align: center;
   width: 100%;
   padding-top: 20px;
@@ -82,6 +82,7 @@ input[type="submit"]:hover { text-decoration: underline; }
   &.jaune { @include gradient(to bottom, $gradientcolors_jaune); }
   &.orange { @include gradient(to bottom, $gradientcolors_orange); }
   &.violet { @include gradient(to bottom, $gradientcolors_violet); }
+  &.blanc { background: white;}
 }
 
 .encadré {
@@ -95,23 +96,16 @@ input[type="submit"]:hover { text-decoration: underline; }
   &.oneliner { padding: 20px 0px 5px !important; }
 }
 .container .encadré { width: 100%; text-align: center; }
+.blanc .encadré { color: black; }
 
 .highlight {
   color: $rouge; 
   font-family: leckerlioneregular;  
 }
 
-
-.contact .titre {
-  font-family: yellowtailregular;
-  color: $rouge;
-  text-align: center;
-  width: 100%;
-}
-
 .vosinfos {
   margin-top: 30px;
-  $list: #00b176,#00b176, #00b17675;
+  $list: $vert,$vert, #00b17675;
   @include gradient(to bottom, $gradientcolors_vert);
   padding: 10px 25px;
 
@@ -137,7 +131,7 @@ input[type="submit"]:hover { text-decoration: underline; }
     line-height: 2;
   }
   textarea  {
-    box-shadow: 4px 4px 1px #00b176;
+    box-shadow: 4px 4px 1px $vert;
     padding: 5px 20px;
     font-family: Arial;
     padding: 0px 25px; width: 100%;
@@ -156,4 +150,50 @@ form {
   &::placeholder { color: $rouge; }
 }
 
+.axes, .programme {
+  .encadré { 
+    margin-bottom: 30px;
+    > ul > li > mark { 
+      padding: inherit;
+      background-color: inherit;
+      color: inherit;
+      font-size: 110%;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+  .axe {
+    font-size: 2rem;
+    text-align: left;
+    padding-left: 10%;
+    padding-top: 20px;
+    color: white;
+    @media (max-width: 650px) { 
+      text-align: center;
+      padding-left: unset;
+      }
+  }
+
+  ul { list-style: none; padding: 0; margin: 0; } // retirer les bullet points par défaut
+  li { padding-left: 16px; }
+  li { padding-bottom: 10px; }
+  li:before {
+    content: "•";
+    padding-right: 8px;
+  }
+  li.suite, ul ul li {
+    padding-top: 10px;
+    &:before {
+      content: "▶";
+      padding-right: 8px;
+      font-size: 1rem;
+    }
+  }
+  ul ul li { 
+    padding-left: 50px;
+    @media (max-width: 650px) { padding-left: 30px; }
+  }
+  
+}
+.blanc .axe { color: $rouge; }
 
