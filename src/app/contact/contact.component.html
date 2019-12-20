@@ -5,11 +5,13 @@
       <div class="row">
         <div class="col">
           <p class="titre">Contactez nous</p>
-          <p class="explications">N'hésitez pas à participer à notre démarche citoyenne !</p>
+          <div class=" surencadré bleu"><div class="encadré oneliner">
+            <p class="explications">Participez à notre démarche citoyenne !</p>
+          </div></div>
         </div>
       </div>
     </div>
-    <div class="surencadré jaune" *ngIf="sent">
+    <div class="surencadré jaune merci" *ngIf="sent">
       <div class="row">
         <div class="col">
           <p class="titre">Merci</p>
@@ -19,8 +21,8 @@
     </div>
     <div class="vosinfos">
       <div class="row">
-        <div class="col-6"><input [ngClass]="{'is-invalid': badnom=='true'}" class="prenom" type="text" placeholder="Pr&eacute;nom" name="prenom" ngModel required></div>
-        <div class="col-6"><input [ngClass]="{'is-invalid': badprenom==true}" class="nom" type="text" placeholder="Nom" name="nom" ngModel required></div>
+        <div class="col-6"><input [ngClass]="{'badfield': badprenom==true}" class="prenom" type="text" placeholder="Pr&eacute;nom" name="prenom" ngModel required></div>
+        <div class="col-6"><input [ngClass]="{'badfield': badnom==true}" class="nom" type="text" placeholder="Nom" name="nom" ngModel required></div>
       </div>
 
       <div class="row">

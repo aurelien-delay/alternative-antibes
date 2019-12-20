@@ -5,10 +5,13 @@ $violet: #926ebf;
 $bleu: #009ec0;
 $orange: #ff8200;
 
-.contactautres { 
-  margin-top: 30px; 
-  .moyen { font-weight: bold; color: $rouge}
-  .courrier, .telephone { padding-bottom: 10px; }
+.contact {
+  .merci { margin-top: 10px; }
+  .contactautres { 
+    margin-top: 30px; 
+    .moyen { font-weight: bold; color: $rouge}
+    .courrier, .telephone { padding-bottom: 10px; }
+  }
 }
 
 

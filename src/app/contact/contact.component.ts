@@ -18,10 +18,9 @@ export class ContactComponent implements OnInit {
   }
 
   envoyer(form) {
-    console.log("form:", form);
+    this.badnom = false;
+    this.badprenom = false;
     if (form.status==="VALID") {
-      this.badnom = false;
-      this.badprenom = false;
       this.apiService.envoyer(form.value).subscribe((contactinfo: ContactInfo)=>{
         console.log("Contact ajouté", contactinfo);
         form.reset();
@@ -30,8 +29,8 @@ export class ContactComponent implements OnInit {
     }
     else {
       console.log("Nom Prénom obligatoires");
-      this.badnom = true;
-      this.badprenom = true;
+      if (!form.value.nom) { this.badnom = true; }
+      if (!form.value.prenom) { this.badprenom = true; }
     }
   }
 
