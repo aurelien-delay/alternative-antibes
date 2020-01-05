@@ -1,10 +1,6 @@
 <?php
 
-// db credentials
-define('DB_HOST', 'alternatnyabc.mysql.db');
-define('DB_USER', 'alternatnyabc');
-define('DB_PASS', 'Antibes2020');
-define('DB_NAME', 'alternatnyabc');
+require 'dbsettings.php';
 
 // Connect with the database.
 function connect()
