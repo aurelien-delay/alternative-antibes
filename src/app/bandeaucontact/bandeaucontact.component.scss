@@ -1,0 +1,17 @@
+.bandeaucontact {
+  padding: 10px 0px;
+  .contact {
+    display: inline-block;
+    // large screen
+    font-size: 0.7rem;
+    img { max-width: 30px; display: inline-block; }
+    // medium and less
+    @media (max-width: 1025px) { 
+      font-size: 0.4rem;
+      img { max-width: 20px; display: inline-block; }
+    }
+    .vmiddle { display: flex; align-items: center;}
+    .texte { padding-left: 15px; }
+    .bold { font-weight: bold; }
+  }
+}

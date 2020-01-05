@@ -11,18 +11,24 @@ $orange: #ff8200;
 
   img { width: 100%; }
   // @media (max-width: 650px) { .accueil, img { width: 0px; height: 0px; visibility: hidden; display: block; } }
+
+  p { margin-bottom: 0px; }
+
+  a:hover { text-decoration: none; font-weight: bold; }
+  a { text-decoration: none; color: inherit; }
+  
+  .liens {
+    font-family: de_valenciaregular; 
+    color: $rouge;
+    padding-top: 20px;
+    // text-align: right;
+  }
+  
+  .liens p { padding: 10px 0px; }
+
+  .subpages { 
+    font-size: 60%;
+    font-family: metropolisregular;
+    color: $vert;
+  }
 }
-
-.lateral p { margin-bottom: 0px; }
-
-.lateral a:hover { text-decoration: none; font-weight: bold; }
-.lateral a { text-decoration: none; color: inherit; }
-
-.lateral .liens {
-  font-family: de_valenciaregular; 
-  color: $rouge;
-  padding-top: 20px;
-  // text-align: right;
-}
-
-.lateral .liens p { padding: 10px 0px; }

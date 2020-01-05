@@ -11,6 +11,7 @@ import { AteliersComponent } from './ateliers/ateliers.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProgrammeComponent } from './programme/programme.component';
+import { BandeaucontactComponent } from './bandeaucontact/bandeaucontact.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProgrammeComponent } from './programme/programme.component';
     AteliersComponent,
     AccueilComponent,
     ContactComponent,
-    ProgrammeComponent
+    ProgrammeComponent,
+    BandeaucontactComponent
   ],
   imports: [
     BrowserModule,
