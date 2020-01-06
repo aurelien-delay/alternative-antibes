@@ -12,6 +12,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProgrammeComponent } from './programme/programme.component';
 import { BandeaucontactComponent } from './bandeaucontact/bandeaucontact.component';
+import { AgendaComponent } from './agenda/agenda.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BandeaucontactComponent } from './bandeaucontact/bandeaucontact.compone
     AccueilComponent,
     ContactComponent,
     ProgrammeComponent,
-    BandeaucontactComponent
+    BandeaucontactComponent,
+    AgendaComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,9 @@ import { BandeaucontactComponent } from './bandeaucontact/bandeaucontact.compone
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: Window, useValue: window },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
