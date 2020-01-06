@@ -2,9 +2,61 @@
   width: 10%;
   height: 100%;
   padding: 10px 16px;
-  background: #555;
-  color: #f1f1f1;
+  background: white;
+  color: #555;
+
+  // initialisation à 1049px. ensuite l'agenda sera fixé et suivra le scroll.
   position: fixed;
-  top: 1049;
+  top: 1049px;
   right: 0;
+  overflow-y: scroll;
+
+  // timeline
+  .ligne {
+    height: 100%;
+    width: 25px;
+    background: linear-gradient(to right, yellow 00%, white 20% 30%, yellow 50%);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
+  }
+
+  .events {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+    .event {
+      position: relative;
+      height: 120px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 24px;
+
+      // position
+      .date, .icon, .type, .lieu { position: absolute; }
+      .date { top: 0px; }
+      .icon { top: 0px; }
+      .type { top: 75px; }
+      .lieu { top: 90px; }
+      font-size: 0.5rem;
+
+      // tracé figure (temporaire en attendant vraie icone)
+      .icon {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        font-size: 50px;
+        // color: #fff;
+        line-height: 500px;
+        text-align: center;
+        background: radial-gradient(closest-side, green 0% 80%, white 90%, green);
+      }
+    }
+  }
 }
