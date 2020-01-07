@@ -1,0 +1,19 @@
+$vert: #00b176;
+$rouge: #e4002b;
+$jaune: #ffc72c;
+$violet: #926ebf;
+$bleu: #009ec0;
+$orange: #ff8200;
+
+.agendapage {
+  h1 { font-size: 2rem;}
+  .rouge h1 { color: white; }
+  p { color: white; margin-bottom: 0.3rem; font-weight: bold; }
+  .date { padding-bottom: 10px; }
+
+  .tractage {
+    p.lieu { margin-bottom: 0.1rem; color: $jaune;}
+    h1 { color: $rouge; }
+  }
+  .fininscription { margin-top: 75px; }
+}

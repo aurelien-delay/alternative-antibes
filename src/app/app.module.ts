@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProgrammeComponent } from './programme/programme.component';
 import { BandeaucontactComponent } from './bandeaucontact/bandeaucontact.component';
 import { AgendaComponent } from './agenda/agenda.component';
+import { AgendapageComponent } from './agendapage/agendapage.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AgendaComponent } from './agenda/agenda.component';
     ContactComponent,
     ProgrammeComponent,
     BandeaucontactComponent,
-    AgendaComponent
+    AgendaComponent,
+    AgendapageComponent
   ],
   imports: [
     BrowserModule,
