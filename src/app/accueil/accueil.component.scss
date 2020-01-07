@@ -1,3 +1,10 @@
+$vert: #00b176;
+$rouge: #e4002b;
+$jaune: #ffc72c;
+$violet: #926ebf;
+$bleu: #009ec0;
+$orange: #ff8200;
+
 .texterassemblement {
   
   div {
@@ -7,58 +14,29 @@
   }
 
   p { padding: 10px 0px; margin-bottom: 0px; }
-}
 
-
-.nousrefusons {
-  font-weight: bold;
-  text-align: center;
-}
-
-.methode .axes {
-  color: #00b176;
-  font-weight: bold;
-}
-
-.accueil {
-  h1, .titre { 
-    font-family: de_valenciaregular; 
-    color: black;
-    @media (max-width: 650px) { font-size: 4rem; } 
+  .qui, .pourquoi { text-align: justify; }
+  .qui {
+    h1 {
+      font-family: yellowtailregular;
+      color: $rouge;
+      font-size: 3rem;
+      @media (max-width: 1000px) { font-size: 2rem; }
+    }
+  }
+  .pourquoi {
+    h1 {
+      font-family: metropolisregular;
+      color: $rouge;
+      font-size: 2rem;
+      @media (min-width: 1400px) { text-align: left; padding-left: 3rem; }
+      @media (max-width: 1000px) { font-size: 1.6rem; }
+    }
   }
 }
 
 /*
 .texterassemblement, .axes {
   width: 80%;
-}
-*/
-
-/*
-.signataires {
-  div { padding:0px; margin:0px;}
-  .contactinfo {
-    padding: 0px 20px;
-    max-width: 124px;
-  }
-  .titre {
-    font-family: de_valenciaregular; 
-    color: black;
-    text-align: center;
-    width: 100%;
-  }
-  .nom {
-    font-size: 1rem;
-    color: black;
-    text-align: center;
-    padding:0px;
-    margin:3px;
-  }
-  .fonction {
-    font-size: 0.7rem;
-    color: #00b176;
-    text-align: justify;
-    padding:0px;
-  }
 }
 */
