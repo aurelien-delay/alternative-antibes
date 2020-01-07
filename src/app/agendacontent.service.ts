@@ -25,32 +25,32 @@ export class AgendacontentService {
       // formatte la date
       if (element.date) {
         const options1 = { weekday: "long", month: "long", day: "numeric" };
-        element.datestr = element.date.toLocaleDateString("fr-FR", options1);
+        element['datestr'] = element.date.toLocaleDateString("fr-FR", options1);
       }
       // full texte pour chaque type
       if (element.type === "L") {
         // trouver le prochain lundi
-        element.datestr = "Tous les Lundi";
-        element.heure = "de 8h30 à 11h";
-        element.type1 = "Espace Rencontre";
-        element.type2 = "avec les acteurs de la ville";
-        element.lieu = ["Local de campagne", " 10 rue Pasteur"];
+        element['datestr'] = "Tous les Lundi";
+        element['heure'] = "de 8h30 à 11h";
+        element['type1'] = "Espace Rencontre";
+        element['type2'] = "avec les acteurs de la ville";
+        element['lieu'] = ["Local de campagne", " 10 rue Pasteur"];
       }
       else if (element.type === "M") {
-        element.type1 = "Manifestation";
-        element.type2 = "contre la réforme des retraites";
+        element['type1'] = "Manifestation";
+        element['type2'] = "contre la réforme des retraites";
       }
       else if (element.type === "T") {
-        element.type1 = "On vient à";
-        element.type2 = "votre rencontre";
+        element['type1'] = "On vient à";
+        element['type2'] = "votre rencontre";
       }
       else if (element.type === "R") {
-        element.type1 = "Réunion publique";
-        element.type2 = "";
+        element['type1'] = "Réunion publique";
+        element['type2'] = "";
       }
       else if (element.type === "I") {
-        element.type1 = "Inauguration de notre";
-        element.type2 = "local de campagne";
+        element['type1'] = "Inauguration de notre";
+        element['type2'] = "local de campagne";
       }
       /*
       else if (element.type === "P") {
@@ -65,8 +65,6 @@ export class AgendacontentService {
     });
 
     // TODO : ajouter les permanences
-
-    console.log("output", output);
     return content;
   }
 }

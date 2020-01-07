@@ -34,9 +34,7 @@ import { AgendapageComponent } from './agendapage/agendapage.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [
-    { provide: Window, useValue: window },
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
