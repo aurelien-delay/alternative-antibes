@@ -2,10 +2,12 @@
   <div class="ligne"></div>
   <div class="events">
     <div *ngFor="let event of agendacontent" class="event">
-      <div class="date"></div>
+      <div class="date"><p><span class="date1">{{event.datestr}}</span><br>{{event.heure}}</p></div>
       <div class="icon"></div>
-      <div class="type">{{event.type}}</div>
-      <div class="lieu"></div>
+      <div class="enbas">
+        <p class="type">{{event.type1}}<br>{{event.type2}}</p>
+        <p *ngFor="let line of event.lieu" class="lieu" >{{line}}</p>
+      </div>
     </div>
   </div>
   

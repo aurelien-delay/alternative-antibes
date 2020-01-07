@@ -1,9 +1,15 @@
+$vert: #00b176;
+$rouge: #e4002b;
+$jaune: #ffc72c;
+$violet: #926ebf;
+$bleu: #009ec0;
+$orange: #ff8200;
+
 .agenda { 
-  width: 10%;
+  width: 20%;
   height: 100%;
   padding: 10px 16px;
   background: white;
-  color: #555;
 
   // initialisation à 1049px. ensuite l'agenda sera fixé et suivra le scroll.
   position: fixed;
@@ -15,7 +21,7 @@
   .ligne {
     height: 100%;
     width: 25px;
-    background: linear-gradient(to right, yellow 00%, white 20% 30%, yellow 50%);
+    background: linear-gradient(to right, $orange 0% 10%, white 20% 25%, $orange 40%);
     left: 0;
     right: 0;
     margin-left: auto;
@@ -26,36 +32,49 @@
   .events {
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
     z-index: 10;
     .event {
       position: relative;
-      height: 120px;
+      height: fit-content;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 24px;
+      margin-top: 30px;
+      &:first-child {margin-top: 40px;}
 
-      // position
-      .date, .icon, .type, .lieu { position: absolute; }
-      .date { top: 0px; }
-      .icon { top: 0px; }
-      .type { top: 75px; }
-      .lieu { top: 90px; }
-      font-size: 0.5rem;
+      display: grid;
+      grid-template-rows: 20vh;
+      grid-template-columns: 17vw;
+
+      font-family: leckerlioneregular;
+      font-size: 1rem;
+      font-weight: bold;
+      text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      color: $vert;
+
+      // position des sous-parties
+      .date, .icon, .enbas { position: absolute; justify-self: center; align-self: center; text-align: center; }
+      .date   { top: -20px; z-index: 10;}
+      .icon   { top: 0px; z-index: 0; }
+      .enbas  { top: 100px; z-index: 10;}
+
+      .date { .date1 { text-transform: capitalize; } }
+      .type { font-size: 120%; }
+      .lieu { font-size: 140%; }
+
+      p { line-height: 18px; margin-bottom: 0.6rem; }
+      .lieu p { line-height: 18px; margin-bottom: 0.3rem; }
+      
 
       // tracé figure (temporaire en attendant vraie icone)
       .icon {
-        width: 75px;
-        height: 75px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         font-size: 50px;
         // color: #fff;
         line-height: 500px;
         text-align: center;
-        background: radial-gradient(closest-side, green 0% 80%, white 90%, green);
+        background: radial-gradient(closest-side, $vert 0% 80%, white 90%, $vert);
       }
     }
   }
