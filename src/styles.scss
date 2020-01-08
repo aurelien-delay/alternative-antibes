@@ -103,6 +103,18 @@ input[type="submit"]:hover { text-decoration: underline; }
   font-family: leckerlioneregular;  
 }
 
+button, input[type=submit] {
+  font-family: de_valenciaregular;
+  color: $rouge;
+  font-size: 6rem;
+  @media (max-width: 650px) { font-size: 3rem; }
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  &:hover { font-weight: bold; text-decoration: none;}
+}
+.rouge button, .rouge input[type=submit] { color: $orange; };
+
 .vosinfos {
   margin-top: 30px;
   $list: $vert,$vert, #00b17675;
@@ -116,16 +128,6 @@ input[type="submit"]:hover { text-decoration: underline; }
     border-width: 1px;
     font-family: Arial;
   }
-  button, input[type=submit] {
-    font-family: de_valenciaregular;
-    color: $rouge;
-    font-size: 6rem;
-    @media (max-width: 650px) { font-size: 3rem; }
-    background-color: transparent;
-    border: none;
-    width: 100%;
-  }
- button:hover { font-weight: bold; }
   .row {
     margin-top: 14px;
     line-height: 2;

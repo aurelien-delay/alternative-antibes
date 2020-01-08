@@ -1,0 +1,35 @@
+<div class="jeparticipe">
+  <p class="participetext">Je participe</p>
+  <p class="plus">+</p>
+  <form #f = "ngForm" (ngSubmit)="envoyer(f)">
+    <div class="merci" *ngIf="sent">
+      <div class="row">
+        <div class="col">
+          <p class="titre">Merci</p>
+          <p class="explications">Votre message a été envoyé avec succés. A bientôt !</p>
+        </div>
+      </div>
+    </div>
+    <div class="infos">
+      <input [ngClass]="{'badfield': badprenom==true}" class="prenom" type="text" placeholder="Pr&eacute;nom" name="prenom" ngModel required>
+      <input [ngClass]="{'badfield': badnom==true}" class="nom" type="text" placeholder="Nom" name="nom" ngModel required>
+      <input class="email" type="email" placeholder="Email" name="email" ngModel>
+      <textarea class="idees" placeholder="Vos idées" name="propositions" ngModel></textarea>
+      <div class="envoyer">
+        <input type="submit"  value="Envoyer">
+      </div>
+      <!--
+      <div class="">
+        <div class=""><input [ngClass]="{'badfield': badprenom==true}" class="prenom" type="text" placeholder="Pr&eacute;nom" name="prenom" ngModel required></div>
+        <div class=""><input [ngClass]="{'badfield': badnom==true}" class="nom" type="text" placeholder="Nom" name="nom" ngModel required></div>
+      </div>
+      <div class="">
+        <div class=""><input class="mail" type="email" placeholder="Email" name="email" ngModel></div>
+      </div>
+      <div class="">
+        <div class=""><textarea class="propositions" placeholder="Vos idées" name="propositions" ngModel></textarea></div>
+      </div>
+      -->
+    </div>
+  </form>
+</div>

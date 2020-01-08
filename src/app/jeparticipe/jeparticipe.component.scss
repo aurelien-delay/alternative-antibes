@@ -1,0 +1,55 @@
+.jeparticipe {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto;
+  grid-template-areas: 
+  "participetext"
+  "plus"
+  "form";
+  grid-column-gap: 0px;
+  grid-row-gap: 30px;
+  justify-items: center;
+  align-items: center;
+
+  .participetext { grid-area: participetext; }
+  .plus { grid-area: plus; }
+
+  .infos {
+    grid-area: form;
+    input, textarea { font-size: 1.2rem;}
+    input[type=submit] { font-size: 3rem;}
+    textarea { width: 100%; height: 200px; }
+
+    // unset .vosinfos venant du formulaire contact
+    /*
+    margin-top: unset;
+    background: unset;
+    textarea { box-shadow: unset; }
+    input { border-color: unset; }
+    */
+
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "prenom nom"
+    "email email"
+    "idees idees"
+    "envoyer envoyer";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-items: center;
+    align-items: center;
+
+    .prenom { grid-area: prenom; }
+    .nom { grid-area: nom; }
+    .email { grid-area: email; width: 100%; justify-self: stretch;}
+    .idees { grid-area: idees; }
+    .envoyer { grid-area: envoyer; }
+
+    // .axetitre { grid-area: titre; }
+
+
+    
+  }
+}
