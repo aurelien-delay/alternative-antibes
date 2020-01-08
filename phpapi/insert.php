@@ -24,11 +24,12 @@ if(isset($postdata) && !empty($postdata))
   $telephone    = mysqli_real_escape_string($con, trim($request->telephone));
   $propositions = mysqli_real_escape_string($con, trim($request->propositions));
   $commentaire  = mysqli_real_escape_string($con, trim($request->commentaire));
+  $remarque     = mysqli_real_escape_string($con, trim($request->remarque));
     
 
   // Store.
-  $sql = "INSERT INTO `contacts`(`prenom`,`nom`,`ville`,`email`,`telephone`,`propositions`,`commentaire`) 
-          VALUES ('{$prenom}','{$nom}','{$ville}','{$email}','{$telephone}', '{$propositions}', '{$commentaire}')";
+  $sql = "INSERT INTO `contacts`(`prenom`,`nom`,`ville`,`email`,`telephone`,`propositions`,`commentaire`,`remarque`) 
+          VALUES ('{$prenom}','{$nom}','{$ville}','{$email}','{$telephone}', '{$propositions}', '{$commentaire}', '{$remarque}')";
 
   // Send mail
   $to = 'aurelien.delay@gmail.com'; // note the comma
@@ -42,13 +43,15 @@ if(isset($postdata) && !empty($postdata))
   <body>
     <p>Infos:<p>
     <p>' .  $prenom . ' ' . $nom . '</p>
-    <p>habite ' .  $ville . '</p>
+    <p>ville ' .  $ville . '</p>
     <p>email ' .  $email . '</p>
     <p>telephone ' .  $telephone . '</p>
     <p>propositions</p>
     <blockquote>' . $propositions . '</blockquote>
     <p>commentaire</p>
     <blockquote>' . $commentaire . '</blockquote>
+    <p>remarque</p>
+    <blockquote>' . $remarque . '</blockquote>
   </body>
   </html>
   ';

@@ -21,7 +21,9 @@ export class ContactComponent implements OnInit {
     this.badnom = false;
     this.badprenom = false;
     if (form.status==="VALID") {
-      this.apiService.envoyer(form.value).subscribe((contactinfo: ContactInfo)=>{
+      let envoi = form.value;
+      envoi['remarque'] = "envoyé depuis la page contact";
+      this.apiService.envoyer(envoi).subscribe((contactinfo: ContactInfo)=>{
         console.log("Contact ajouté", contactinfo);
         form.reset();
         this.sent = true;

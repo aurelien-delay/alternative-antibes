@@ -7,6 +7,7 @@ export  class  ContactInfo {
   telephone: string;
   propositions: string;
   commentaire: string;
+  remarque: string;
   reset() {
     this.nom = "";
     this.prenom = "";
@@ -15,5 +16,6 @@ export  class  ContactInfo {
     this.telephone = "";
     this.propositions = "";
     this.commentaire = "";
+    this.remarque = "";
   }
 }

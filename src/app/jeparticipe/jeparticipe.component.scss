@@ -36,11 +36,19 @@
     grid-row-gap: 10px;
     justify-items: center;
     align-items: center;
+    margin: auto;
 
     .prenom { grid-area: prenom; width: 100%; justify-self: stretch;}
     .nom { grid-area: nom; width: 100%; justify-self: stretch;}
     .email { grid-area: email; width: 100%; justify-self: stretch;}
     .idees { grid-area: idees; width: 100%; justify-self: stretch;}
     .envoyer { grid-area: envoyer; }
+  }
+
+  .merci { 
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    .titre { color: white; font-size: 3rem; }
   }
 }
