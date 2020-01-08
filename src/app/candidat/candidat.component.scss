@@ -1,0 +1,91 @@
+$vert: #00b176;
+$rouge: #e4002b;
+$jaune: #ffc72c;
+$violet: #926ebf;
+$bleu: #009ec0;
+$orange: #ff8200;
+
+.candidat {
+  max-width: 400px;
+
+  padding: unset;
+  div { padding: unset; }
+  display: grid;
+  grid-template-columns: 150px auto;
+  grid-template-rows: 10px 70px 70px auto auto auto;
+  grid-template-areas: 
+  "photo blabla"
+  "photo prenom"
+  "photo nom"
+  "role role"
+  "profession profession"
+  "phrase phrase";
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+
+  @media (max-width: 424px) { 
+    max-width: 300px;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 10px 45px 45px auto auto auto;
+  }
+
+  >div { text-align: center;}
+  .photo { grid-area: photo; }
+  .prenom { grid-area: prenom; justify-self: left;}
+  .nom { grid-area: nom; justify-self: left;}
+  .role { grid-area: role; }
+  .profession { grid-area: profession; }
+  .phrase { grid-area: phrase; text-align: justify;}
+
+  .prenom { font-family: yellowtailregular; font-size: 3rem; color: $rouge;}
+  @media (max-width: 424px) { .prenom { font-size: 2rem; } }
+  .nom {
+    font-size: 2.2rem;
+    
+    color: white;
+    text-transform: uppercase;
+    // width: 100%;
+    width: 300px !important;
+    text-align: left;
+    height: 70px !important;
+    overflow-wrap: break-all;
+    margin-left: -60px;
+    margin-bottom: 3px;
+    z-index: -1;
+    
+    background: $rouge;
+    span { vertical-align: middle; padding: 10px 0px 10px 60px;}
+
+    @media (max-width: 424px) { 
+      font-size: 1.5rem;
+      width: 220px !important;
+      height: 40px !important;
+    }
+  }
+  .role { text-transform: uppercase; font-size: 1.5rem; color: $rouge; font-weight: bold;}
+  @media (max-width: 424px) { .role { font-size: 1rem; } }
+  .profession { white-space: pre; font-size: 1rem; font-weight: bold;}
+  @media (max-width: 424px) { .profession { font-size: 0.7rem; } }
+  .phrase { 
+    color: $rouge;
+    &:before { content : "\0000AB"; }
+    &:after  { content : "\0000BB"; }
+  }
+  
+ 
+  .photo img { 
+    width: 150px;
+    height:150px;
+    // circle crop around the photo
+    object-fit:cover;
+    border-radius:50%;
+    border: white 3px solid;
+    @media (max-width: 424px) { 
+      width: 100px;
+      height:100px;
+    }
+  }
+}

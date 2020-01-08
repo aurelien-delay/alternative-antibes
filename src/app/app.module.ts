@@ -14,6 +14,7 @@ import { ProgrammeComponent } from './programme/programme.component';
 import { BandeaucontactComponent } from './bandeaucontact/bandeaucontact.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { AgendapageComponent } from './agendapage/agendapage.component';
+import { CandidatComponent } from './candidat/candidat.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AgendapageComponent } from './agendapage/agendapage.component';
     ProgrammeComponent,
     BandeaucontactComponent,
     AgendaComponent,
-    AgendapageComponent
+    AgendapageComponent,
+    CandidatComponent
   ],
   imports: [
     BrowserModule,

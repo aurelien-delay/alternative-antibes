@@ -26,6 +26,9 @@
     </div>
     <!-- portraits TODO -->
     <div class="portraits">
+      <div *ngFor="let candidat of tetesdeliste">
+        <app-candidat [candidat]=candidat></app-candidat>
+      </div>
       
     </div>
     <div class="pourquoi surencadré vert">

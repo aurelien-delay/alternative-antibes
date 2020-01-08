@@ -23,6 +23,7 @@ $orange: #ff8200;
       font-size: 3rem;
       @media (max-width: 1000px) { font-size: 2rem; }
     }
+    margin-bottom: 40px;
   }
   .pourquoi {
     h1 {
@@ -32,6 +33,22 @@ $orange: #ff8200;
       @media (min-width: 1400px) { text-align: left; padding-left: 3rem; }
       @media (max-width: 1000px) { font-size: 1.6rem; }
     }
+    margin-top: 40px;
+  }
+
+  .portraits {
+    padding: 10px 50px;
+    div { padding: unset; }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width: 1361px) { grid-template-columns: 1fr; padding: 10px 20px; }
+    grid-template-rows: auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+    justify-items: center;
+    align-items: center;
+    max-width: 2000px;
+    margin: auto;
   }
 }
 
