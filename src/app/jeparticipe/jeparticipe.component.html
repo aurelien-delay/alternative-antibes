@@ -1,8 +1,8 @@
 <div class="jeparticipe">
-  <p class="participetext" (click)="this.isButtonVisible = !this.isButtonVisible">Je participe</p>
-  <img class="plus" src={{sign}} (click)="this.isButtonVisible = !this.isButtonVisible">
+  <p class="participetext" (click)="switchForm()">Je participe</p>
+  <img class="plus" src={{sign}} (click)="switchForm()">
   <form #f = "ngForm" (ngSubmit)="envoyer(f)">
-    <div class="infos" *ngIf="this.isButtonVisible">
+    <div class="infos" *ngIf="this.isFormVisible">
       <input [ngClass]="{'badfield': badprenom==true}" class="prenom" type="text" placeholder="Pr&eacute;nom" name="prenom" ngModel required>
       <input [ngClass]="{'badfield': badnom==true}" class="nom" type="text" placeholder="Nom" name="nom" ngModel required>
       <input [ngClass]="{'badfield': badmail==true}" class="email" type="email" placeholder="Email" name="email" ngModel required>

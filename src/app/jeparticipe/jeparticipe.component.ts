@@ -13,8 +13,8 @@ export class JeparticipeComponent implements OnInit {
   public badprenom = false;
   public badmail = false;
   public sent = false;
-  private isButtonVisible = false;
-  private sign = "assets/plus-sign-in-circle.svg";
+  public isFormVisible = false;
+  public sign = "assets/plus-sign-in-circle.svg";
   @Input() axe: any;
 
   constructor(private apiService: ApiService) { }
@@ -23,9 +23,9 @@ export class JeparticipeComponent implements OnInit {
   }
 
   switchForm() {
-    this.isButtonVisible = !this.isButtonVisible;
-    if (this.sign === "assets/plus-sign-in-circle.svg")    this.sign = "assets/plus-sign-in-circle.svg";
-    else                                                   this.sign = "assets/minus-sign-in-circle.svg";
+    this.isFormVisible = !this.isFormVisible;
+    if (this.sign === "assets/plus-sign-in-circle.svg")    this.sign = "assets/minus-sign-in-circle.svg";
+    else                                                   this.sign = "assets/plus-sign-in-circle.svg";
   }
 
   envoyer(form) {
