@@ -8,7 +8,7 @@ import { element } from 'protractor';
 })
 export class CandidatComponent implements OnInit {
 
-  @Input() candidat: {};
+  @Input() candidat: any;
 
   constructor() { }
   photo: string;
