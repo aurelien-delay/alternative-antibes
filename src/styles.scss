@@ -103,6 +103,11 @@ input[type="submit"]:hover { text-decoration: underline; }
   font-family: leckerlioneregular;  
 }
 
+input, textarea {
+  border-radius: 15px;
+  border: $jaune 3px solid;
+  padding-left: 10px;
+}
 button, input[type=submit] {
   font-family: de_valenciaregular;
   color: $rouge;
@@ -112,8 +117,11 @@ button, input[type=submit] {
   border: none;
   width: 100%;
   &:hover { font-weight: bold; text-decoration: none;}
+  border-radius: unset !important;
+  border: unset !important;
+  line-height: unset !important;
 }
-.rouge button, .rouge input[type=submit] { color: $orange; };
+.rouge button, .rouge input[type=submit] { color: $jaune; };
 
 .vosinfos {
   margin-top: 30px;
@@ -123,9 +131,6 @@ button, input[type=submit] {
 
   input[type=text], input[type=email], input[type=tel]  {
     width: 100%;
-    padding-left: 10px;
-    border-color: #00b17675;
-    border-width: 1px;
     font-family: Arial;
   }
   .row {

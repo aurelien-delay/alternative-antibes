@@ -1,6 +1,6 @@
 <div class="jeparticipe">
-  <p class="participetext">Je participe</p>
-  <p class="plus">+</p>
+  <p class="participetext" (click)="this.isButtonVisible = !this.isButtonVisible">Je participe</p>
+  <img class="plus" src={{sign}} (click)="this.isButtonVisible = !this.isButtonVisible">
   <form #f = "ngForm" (ngSubmit)="envoyer(f)">
     <div class="merci" *ngIf="sent">
       <div class="row">
@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div class="infos">
+    <div class="infos" *ngIf="this.isButtonVisible">
       <input [ngClass]="{'badfield': badprenom==true}" class="prenom" type="text" placeholder="Pr&eacute;nom" name="prenom" ngModel required>
       <input [ngClass]="{'badfield': badnom==true}" class="nom" type="text" placeholder="Nom" name="nom" ngModel required>
       <input class="email" type="email" placeholder="Email" name="email" ngModel>

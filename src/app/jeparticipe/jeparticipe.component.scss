@@ -7,26 +7,22 @@
   "plus"
   "form";
   grid-column-gap: 0px;
-  grid-row-gap: 30px;
+  grid-row-gap: 0px;
   justify-items: center;
   align-items: center;
 
   .participetext { grid-area: participetext; }
-  .plus { grid-area: plus; }
+  .participetext:hover { text-decoration: underline; }
+  .plus { grid-area: plus; width: 40px; padding-bottom: 20px; margin-top: -20px;}
 
   .infos {
+    width: 400px;
+    @media (max-width: 1400px) { width: 300px; }
     grid-area: form;
-    input, textarea { font-size: 1.2rem;}
+    input, textarea { font-size: 1.2rem; line-height: 2rem;}
     input[type=submit] { font-size: 3rem;}
     textarea { width: 100%; height: 200px; }
-
-    // unset .vosinfos venant du formulaire contact
-    /*
-    margin-top: unset;
-    background: unset;
-    textarea { box-shadow: unset; }
-    input { border-color: unset; }
-    */
+    @media (max-width: 500px) { textarea {width: 300px;} }
 
     display: grid;
     grid-template-rows: auto auto auto auto;
@@ -41,15 +37,10 @@
     justify-items: center;
     align-items: center;
 
-    .prenom { grid-area: prenom; }
-    .nom { grid-area: nom; }
+    .prenom { grid-area: prenom; width: 100%; justify-self: stretch;}
+    .nom { grid-area: nom; width: 100%; justify-self: stretch;}
     .email { grid-area: email; width: 100%; justify-self: stretch;}
-    .idees { grid-area: idees; }
+    .idees { grid-area: idees; width: 100%; justify-self: stretch;}
     .envoyer { grid-area: envoyer; }
-
-    // .axetitre { grid-area: titre; }
-
-
-    
   }
 }

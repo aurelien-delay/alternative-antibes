@@ -1,12 +1,26 @@
 .programme {
   .intro { padding-bottom: 35px; }
 
+  .axetitre {
+    font-size: 4rem;
+    font-family: yellowtailregular;
+    text-align: left;
+    padding-top: 20px;
+    color: white;
+    @media (max-width: 650px) { 
+      font-size: 2rem;
+      text-align: center;
+      padding-left: unset;
+    }
+    @media (min-width: 2000px) { font-size: 5rem; }
+  }
+
   .gauche, .droite {
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-    "titre titre titre"
+    "titre1 titre2 titre3"
     "xy11 xy12 xy13"
     "xy21 xy22 xy23";
     grid-column-gap: 0px;
@@ -14,17 +28,20 @@
     justify-items: center;
     align-items: center;
 
-    .axetitre { grid-area: titre; }
     .encadré { width: 90%; }
   }
 
   // pour mediums et grands ecrans, participe est sur le coté, opposé au texte.
   .gauche .encadré { grid-area: xy11 / xy11 / xy22 / xy22; }
   .droite .encadré { grid-area: xy12 / xy12 / xy23 / xy23; }
-  .gauche .participe { grid-area: xy13 / xy13 / xy23 / xy23; }
-  .droite .participe { grid-area: xy11 / xy11 / xy21 / xy21; }
+  .gauche .participe { grid-area: xy23 / xy23 / xy23 / xy23; }
+  .droite .participe { grid-area: xy21 / xy21 / xy21 / xy21; }
+  .gauche .axetitre { grid-area: titre2 / titre2 / titre3 / titre3; text-align: right; padding-right: 20px;}
+  .droite .axetitre { grid-area: titre1 / titre1 / titre2 / titre2; text-align: left;}
+  .participe { align-self: flex-start;}
   // pour petit ecrans, participe est en dessous, le texte prend toute la largeur.
   @media (max-width: 1023px) {
+    .gauche, .droite { grid-template-rows: auto auto auto; }
     .gauche .encadré { grid-area: xy11 / xy11 / xy13 / xy13; }
     .droite .encadré { grid-area: xy11 / xy11 / xy13 / xy13; }
     .gauche .participe { grid-area: xy21 / xy21 / xy23 / xy23; }
