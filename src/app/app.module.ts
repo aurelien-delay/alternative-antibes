@@ -16,6 +16,7 @@ import { AgendaComponent } from './agenda/agenda.component';
 import { AgendapageComponent } from './agendapage/agendapage.component';
 import { CandidatComponent } from './candidat/candidat.component';
 import { JeparticipeComponent } from './jeparticipe/jeparticipe.component';
+import { PlanveloComponent } from './planvelo/planvelo.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { JeparticipeComponent } from './jeparticipe/jeparticipe.component';
     AgendaComponent,
     AgendapageComponent,
     CandidatComponent,
-    JeparticipeComponent
+    JeparticipeComponent,
+    PlanveloComponent
   ],
   imports: [
     BrowserModule,

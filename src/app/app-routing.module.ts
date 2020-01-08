@@ -6,6 +6,7 @@ import { PresseComponent } from './presse/presse.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProgrammeComponent } from './programme/programme.component';
 import { AgendapageComponent } from './agendapage/agendapage.component';
+import { PlanveloComponent } from './planvelo/planvelo.component';
 
 const routes: Routes = [
   { path: '', component: AccueilComponent, },
@@ -14,6 +15,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent, },
   { path: 'programme', component: ProgrammeComponent, },
   { path: 'agenda', component: AgendapageComponent, },
+  { path: 'planvelo', component: PlanveloComponent, },
+  { path: '**', redirectTo: '', },
 ];
 
 @NgModule({
