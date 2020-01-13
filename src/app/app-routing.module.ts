@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProgrammeComponent } from './programme/programme.component';
 import { AgendapageComponent } from './agendapage/agendapage.component';
 import { PlanveloComponent } from './planvelo/planvelo.component';
+import { SituationEnvibusComponent } from './situation-envibus/situation-envibus.component';
 
 const routes: Routes = [
   { path: '', component: AccueilComponent, },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'programme', component: ProgrammeComponent, },
   { path: 'agenda', component: AgendapageComponent, },
   { path: 'planvelo', component: PlanveloComponent, },
+  { path: 'situation-envibus', component: SituationEnvibusComponent, },
   { path: '**', redirectTo: '', },
 ];
 

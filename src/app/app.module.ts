@@ -17,6 +17,7 @@ import { AgendapageComponent } from './agendapage/agendapage.component';
 import { CandidatComponent } from './candidat/candidat.component';
 import { JeparticipeComponent } from './jeparticipe/jeparticipe.component';
 import { PlanveloComponent } from './planvelo/planvelo.component';
+import { SituationEnvibusComponent } from './situation-envibus/situation-envibus.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PlanveloComponent } from './planvelo/planvelo.component';
     AgendapageComponent,
     CandidatComponent,
     JeparticipeComponent,
-    PlanveloComponent
+    PlanveloComponent,
+    SituationEnvibusComponent
   ],
   imports: [
     BrowserModule,

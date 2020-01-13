@@ -7,6 +7,13 @@ $orange: #ff8200;
 
 .contact {
   .merci { margin-top: 10px; }
+
+  .soutien {
+    color: white;
+    @media (min-width: 650px) { width: 50%; }
+    margin: auto;
+  }
+
   .contactautres { 
     margin-top: 30px; 
     .moyen { font-weight: bold; color: $rouge}
