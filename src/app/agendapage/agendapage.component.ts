@@ -21,9 +21,16 @@ export class AgendapageComponent implements OnInit {
   filterTractage(list) {
     let output = [];
     list.forEach(element => {
-      if (element.type === 'T') { output.push(element); }
+      let pushitem = (element.type === 'T');
+      pushitem = pushitem && (element.date > new Date() );
+      if (pushitem) { output.push(element); }
     });
     return output;
+  }
+
+  isBefore(datestr) {
+    let date = new Date(datestr);
+    return ( new Date() <= date );
   }
 
 }

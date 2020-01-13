@@ -1,33 +1,44 @@
 <div class="agendapage">
   <!-- espace rencontre -->
   <div class="surencadré jaune category">
-      <h1>Espace rencontre avec les acteurs associatifs et syndicaux de la ville</h1>
-      <p class="lieu">au local de campagne, 10 rue Pasteur à Antibes</p>
-      <p class="date">Tous les Lundi, de 8h30 à 10h</p>
-    </div>
+    <h1>Espace rencontre avec les acteurs associatifs et syndicaux de la ville</h1>
+    <p class="lieu">au local de campagne, 10 rue Pasteur à Antibes</p>
+    <p class="date">Tous les Lundi, de 8h30 à 10h</p>
+  </div>
+  <div class="surencadré vert category">
+    <h1>Permanence</h1>
+    <p class="lieu">au local de campagne, 10 rue Pasteur à Antibes</p>
+    <p class="date">le Lundi, de 14h à 19h</p>
+    <p class="date">le Mardi, de 14h à 18h</p>
+    <p class="date">le Mercredi, de 14h à 18h</p>
+    <p class="date">le Jeudi, de 10h à 18h</p>
+  </div>
   <!-- inauguration -->
+  <!--
   <div class="surencadré vert category">
     <h1>Inauguration du local de campagne</h1>
     <p class="lieu">10 rue Pasteur à Antibes</p>
     <p class="date">Samedi 11 Janvier à 11h</p>
   </div>
+  -->
   <!-- manif -->
   <div class="surencadré rouge category">
       <h1>Manifestation contre la réforme des retraites</h1>
-      <p class="lieu">Départ Place Garibaldi à Nice</p>
-      <p class="date">Jeudi 9 Janvier à 11h</p>
+      <p class="lieu">Départ Place Massena à Nice</p>
+      <p class="date">Mardi 14 Janvier à 10h</p>
   </div>
   <!-- tractage -->
   <div class="surencadré orange category tractage" >
       <h1>On vient à votre rencontre</h1>
-      <div *ngFor="let event of tractagelist" class="tractage">
+      <div *ngFor="let event of tractagelist" class="tractage old">
         <p class="lieu">{{event.lieu}}</p>
         <p class="date">{{event.datestr}} {{event.heure}}</p>
       </div>
   </div>
   
   <!-- fin des inscriptions -->
-  <div class="surencadré rouge category fininscription">
+  <hr class="vote">
+  <div class="surencadré rouge category" *ngIf="isBefore('07FEB20')">
       <h1>Fin de l'inscription sur les listes électorales</h1>
       <P class="warning">Pensez à vous inscrire !</P>
       <p class="date">Vendredi 7 février 2020</p>
