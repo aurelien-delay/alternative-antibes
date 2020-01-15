@@ -8,6 +8,7 @@ import { ProgrammeComponent } from './programme/programme.component';
 import { AgendapageComponent } from './agendapage/agendapage.component';
 import { PlanveloComponent } from './planvelo/planvelo.component';
 import { SituationEnvibusComponent } from './situation-envibus/situation-envibus.component';
+import { SoutienMouvementSocialComponent } from './soutien-mouvement-social/soutien-mouvement-social.component';
 
 const routes: Routes = [
   { path: '', component: AccueilComponent, },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'agenda', component: AgendapageComponent, },
   { path: 'planvelo', component: PlanveloComponent, },
   { path: 'situation-envibus', component: SituationEnvibusComponent, },
+  { path: 'soutien-mouvement-social', component: SoutienMouvementSocialComponent, },
   { path: '**', redirectTo: '', },
 ];
 

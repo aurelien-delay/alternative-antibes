@@ -18,6 +18,7 @@ import { CandidatComponent } from './candidat/candidat.component';
 import { JeparticipeComponent } from './jeparticipe/jeparticipe.component';
 import { PlanveloComponent } from './planvelo/planvelo.component';
 import { SituationEnvibusComponent } from './situation-envibus/situation-envibus.component';
+import { SoutienMouvementSocialComponent } from './soutien-mouvement-social/soutien-mouvement-social.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SituationEnvibusComponent } from './situation-envibus/situation-envibus
     CandidatComponent,
     JeparticipeComponent,
     PlanveloComponent,
-    SituationEnvibusComponent
+    SituationEnvibusComponent,
+    SoutienMouvementSocialComponent
   ],
   imports: [
     BrowserModule,
