@@ -12,6 +12,17 @@ $orange: #ff8200;
     color: white;
     @media (min-width: 650px) { width: 50%; }
     margin: auto;
+    h1 { font-size: 3rem; }
+  }
+  .financier {
+    text-align: left;
+    padding-top: 25px;
+    color: $rouge;
+    max-width: 80%;
+    margin: auto;
+    font-size: 80%;
+    p { margin-bottom: 0px; }
+    .center {margin-bottom: 10px;}
   }
 
   .contactautres { 

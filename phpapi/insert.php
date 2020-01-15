@@ -25,11 +25,17 @@ if(isset($postdata) && !empty($postdata))
   $propositions = mysqli_real_escape_string($con, trim($request->propositions));
   $commentaire  = mysqli_real_escape_string($con, trim($request->commentaire));
   $remarque     = mysqli_real_escape_string($con, trim($request->remarque));
+  $militer      = "non";
+  $candidat     = "non";
+  $comité       = "non";
+  if ( filter_var($request->militer,  FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) ) { $militer   = "oui"; }
+  if ( filter_var($request->candidat, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) ) { $candidat  = "oui"; }
+  if ( filter_var($request->comité,   FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) ) { $comité    = "oui"; }
     
 
   // Store.
-  $sql = "INSERT INTO `contacts`(`prenom`,`nom`,`ville`,`email`,`telephone`,`propositions`,`commentaire`,`remarque`) 
-          VALUES ('{$prenom}','{$nom}','{$ville}','{$email}','{$telephone}', '{$propositions}', '{$commentaire}', '{$remarque}')";
+  $sql = "INSERT INTO `contacts`(`prenom`,`nom`,`ville`,`email`,`telephone`,`propositions`,`commentaire`,`militer`,`candidat`,`comité`,`remarque`) 
+          VALUES ('{$prenom}','{$nom}','{$ville}','{$email}','{$telephone}', '{$propositions}', '{$commentaire}', '{$militer}', '{$candidat}', '{$comité}' ,'{$remarque}')";
 
   // Send mail
   $to = 'aurelien.delay@gmail.com'; // note the comma
@@ -50,6 +56,8 @@ if(isset($postdata) && !empty($postdata))
     <blockquote>' . $propositions . '</blockquote>
     <p>commentaire</p>
     <blockquote>' . $commentaire . '</blockquote>
+    <p>soutien</p>
+    <p>militer: ' . $militer . ', être candidat·e: ' . $candidat . ', comité de soutien: ' . $comité . '</p>
     <p>remarque</p>
     <blockquote>' . $remarque . '</blockquote>
   </body>

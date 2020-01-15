@@ -7,6 +7,9 @@ export  class  ContactInfo {
   telephone: string;
   propositions: string;
   commentaire: string;
+  militer: boolean;
+  candidat: boolean;
+  comité: boolean;
   remarque: string;
   reset() {
     this.nom = "";
@@ -16,6 +19,9 @@ export  class  ContactInfo {
     this.telephone = "";
     this.propositions = "";
     this.commentaire = "";
+    this.militer = false;
+    this.candidat = false;
+    this.comité = false;
     this.remarque = "";
   }
 }
