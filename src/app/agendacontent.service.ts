@@ -20,7 +20,6 @@ export class AgendacontentService {
       {type: "T", date: new Date("17JAN20"), heure: "à 8h",         lieu: ["Ecole La Tournière"]},
       {type: "T", date: new Date("18JAN20"), heure: "à 10h",        lieu: ["Vieille ville"]},
       {type: "T", date: new Date("20JAN20"), heure: "à 8h",         lieu: ["Ecole Juan-les-Pins Gare"]},
-
       {type: "T", date: new Date("20JAN20"), heure: "à 16h",        lieu: ["Ecole de la Fontonne"]},
       {type: "T", date: new Date("21JAN20"), heure: "à 8h",         lieu: ["Ecole St-Maymes"]},
       {type: "T", date: new Date("22JAN20"), heure: "à 17h30",      lieu: ["Quartier St-Jean"]},
@@ -28,6 +27,17 @@ export class AgendacontentService {
       {type: "T", date: new Date("25JAN20"), heure: "à 10h",        lieu: ["Antibes-les-Pins"]},
       {type: "T", date: new Date("27JAN20"), heure: "à 7h",         lieu: ["devant la Poste Jules Grec, et le centre de tri Weisweller"]},
       {type: "T", date: new Date("27JAN20"), heure: "à 18h",        lieu: ["Présence aux voeux pour le personel municipal"]},
+
+      {type: "T", date: new Date("28JAN20"), heure: "à 8h",         lieu: ["Ecole St Claude"]},
+      {type: "T", date: new Date("30JAN20"), heure: "à 8h",         lieu: ["Ecole Pont du Lys"]},
+      {type: "T", date: new Date("30JAN20"), heure: "à 16h30",      lieu: ["Ecole des Semboules"]},
+      {type: "T", date: new Date("31JAN20"), heure: "à 8h",         lieu: ["Ecole Super Antibes"]},
+      {type: "T", date: new Date("01FEB20"), heure: "à 14h30",      lieu: ["Vieille ville"]},
+      {type: "T", date: new Date("02FEB20"), heure: "à 11h",        lieu: ["Présence sur le bord de mer cyclable"]},
+      {type: "T", date: new Date("03FEB20"), heure: "à 8h",         lieu: ["Ecole Paul Arène"]},
+      {type: "T", date: new Date("03FEB20"), heure: "à 16h30",      lieu: ["Ecole Boissier"]},
+      {type: "R", date: new Date("03FEB20"), heure: "à 19h",        lieu: ["'L'Alternative reçoit' - au local de campagne"]},
+      {type: "T", date: new Date("04FEB20"), heure: "à 8h",         lieu: ["Ecole du cap"]},
 
       {type: "I", date: new Date("11JAN20"), heure: "à 11h",        lieu: ["10 rue Pasteur", "à Antibes"]},
       {type: "V", date: new Date("31JAN20"), heure: "de 18h",       lieu: [],                         type1: "Fin des inscriptions sur les listes électorales"},
