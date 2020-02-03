@@ -39,6 +39,16 @@ export class AgendacontentService {
       {type: "R", date: new Date("03FEB20"), heure: "à 19h",        lieu: ["'L'Alternative reçoit' - au local de campagne"]},
       {type: "T", date: new Date("04FEB20"), heure: "à 8h",         lieu: ["Ecole du cap"]},
 
+
+      {type: "T", date: new Date("04FEB20"), heure: "à 16h",         lieu: ["Ecole Roger Cardi"]},
+      {type: "T", date: new Date("05FEB20"), heure: "à 17h30",       lieu: ["Résidence Laval Laeticia"]},
+      {type: "T", date: new Date("06FEB20"), heure: "à 17h30",       lieu: ["Résidence Chataignier"]},
+      {type: "T", date: new Date("08FEB20"), heure: "à 15h",         lieu: ["Parc Exflora"]},
+      {type: "T", date: new Date("10FEB20"), heure: "à 17h30",       lieu: ["Résidence Les Tilleuls"]},
+      {type: "T", date: new Date("11FEB20"), heure: "à 17h30",       lieu: ["Résidence St Claude"]},
+
+      {type: "R", date: new Date("08FEB20"), heure: "à 18h",         lieu: ["Aux Semboules - contactez Gérard Piel au 06.08.21.76.99"]},
+
       {type: "I", date: new Date("11JAN20"), heure: "à 11h",        lieu: ["10 rue Pasteur", "à Antibes"]},
       {type: "V", date: new Date("31JAN20"), heure: "de 18h",       lieu: [],                         type1: "Fin des inscriptions sur les listes électorales"},
       {type: "V", date: new Date("15MAR20"), heure: "de 8h à 20h",  lieu: ["votre bureau de vote"],     type1: "1er tour"},

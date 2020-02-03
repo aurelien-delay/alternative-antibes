@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PlanveloComponent implements OnInit {
 
   constructor() { }
+  pdfsrc = "assets/planvelo.pdf";
 
   ngOnInit() {
   }

@@ -17,7 +17,11 @@
   <!-- manif -->
   <div class="surencadré rouge category">
       <h1>Manifestation contre la réforme des retraites</h1>
-      <p class="lieu">à Nice</p>
+      <p class="lieu">Gare Thiers à Nice</p>
+      <p class="date">Jeudi 6 Février</p>
+      <br>
+      <h1>Retraite au flambeau</h1>
+      <p class="lieu">Thêatre de verdure à Nice</p>
       <p class="date">Mercredi 29 Janvier</p>
   </div>
   <!-- inauguration -->
@@ -27,12 +31,35 @@
     <p class="date">Lundi 3 Février à partir de 18h30</p>
   </div>
   <!-- tractage -->
-  <div class="surencadré orange category tractage" >
+  <div class="surencadré orange category tractage" > 
       <h1>On vient à votre rencontre</h1>
       <div *ngFor="let event of tractagelist" class="tractage old">
         <p class="lieu">{{event.lieu}}</p>
         <p class="date">{{event.datestr}} {{event.heure}}</p>
       </div>
+  </div>
+  <!-- réunion d'appart -->
+  <div class="surencadré jaune category" >
+    <h1>Réunions d'appartement</h1>
+    <div *ngFor="let event of appartlist" class="appart old">
+      <p class="lieu">{{event.lieu}}</p>
+      <p class="date">{{event.datestr}} {{event.heure}}</p>
+    </div>
+  </div>
+
+  <br>
+  <!-- Réunion publique -->
+  <div class="surencadré vert category">
+    <h1>Après-midi littéraire</h1>
+    <p class="">Avec Thomas Porte, auteur de "au coeur de la haine" sur la montée de l'extrême droite</p>
+    <p class="">Et Geneviève Legay, auteure de "Celle qui n'était pas sage" sur les violences policières et les libertés individuelles</p>
+    <p class="lieu">10 rue Pasteur à Antibes</p>
+    <p class="date">Samedi 22 Février à 14h</p>
+  </div>
+  <div class="surencadré vert category">
+    <h1>Réunion publique</h1>
+    <p class="lieu">Salle du 8 Mai</p>
+    <p class="date">Mercredi 11 Mars à 19h</p>
   </div>
   
   <!-- fin des inscriptions -->

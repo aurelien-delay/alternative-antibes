@@ -11,18 +11,20 @@ export class AgendapageComponent implements OnInit {
   constructor(private agendacontentService: AgendacontentService) { }
   agendacontent: Array<Object>;
   tractagelist: Array<Object>;
+  appartlist: Array<Object>;
 
   ngOnInit() {
     this.agendacontent = this.agendacontentService.initContent();
-    this.tractagelist = this.filterTractage(this.agendacontent);
+    this.tractagelist = this.filter(this.agendacontent, 'T');
+    this.appartlist = this.filter(this.agendacontent, 'R');
   }
 
   // filterTractage(list: Object[]): Object[] {
-  filterTractage(list) {
+  filter(list, type) {
     let output = [];
     list.forEach(element => {
-      let pushitem = (element.type === 'T');
-      pushitem = pushitem && (element.date > new Date() );
+      let pushitem = (element.type === type);
+      pushitem = pushitem && (element.date >= new Date() );
       if (pushitem) { output.push(element); }
     });
     return output;

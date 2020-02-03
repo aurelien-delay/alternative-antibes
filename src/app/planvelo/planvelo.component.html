@@ -1,7 +1,6 @@
-<div class="planvelo">
-  <div class="surencadré blanc">notre plan velo</div>
-  <div class="surencadré vert">limiter voiture</div>
-  <div class="surencadré blanc">envivelo</div>
-  <div class="surencadré rouge">relier quartiers</div>
-  <div class="surencadré blanc">faire tester</div>
+<div class="article">
+  <h1 class="surencadré vert source">Plan Vélo</h1>
+  <a href="{{pdfsrc}}">
+    <pdf-viewer [src]="pdfsrc" [render-text]="false" style="display: block;" [original-size]="true" [fit-to-page]="true"></pdf-viewer>
+  </a>
 </div>
