@@ -22,9 +22,10 @@ export class AgendapageComponent implements OnInit {
   // filterTractage(list: Object[]): Object[] {
   filter(list, type) {
     let output = [];
+    let tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate() - 1);
     list.forEach(element => {
       let pushitem = (element.type === type);
-      pushitem = pushitem && (element.date >= new Date() );
+      pushitem = pushitem && (element.date > tomorrow );
       if (pushitem) { output.push(element); }
     });
     return output;

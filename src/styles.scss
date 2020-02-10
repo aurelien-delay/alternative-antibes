@@ -38,7 +38,7 @@ input[type="submit"]:hover { text-decoration: underline; }
   text-align: center; 
   @media (max-width: 650px) { font-size: 2rem; }
 }
-.entete img { max-width: 100%; }
+.entete img { max-width: 80%; }
 .alternative        { font-family: de_valenciaregular; color: $vert; }
 .valeurs            { font-family: leckerlioneregular; color: $rouge }
 .ecologique         { font-family: leckerlioneregular; color: $vert }

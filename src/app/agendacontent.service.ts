@@ -44,10 +44,19 @@ export class AgendacontentService {
       {type: "T", date: new Date("05FEB20"), heure: "à 17h30",       lieu: ["Résidence Laval Laeticia"]},
       {type: "T", date: new Date("06FEB20"), heure: "à 17h30",       lieu: ["Résidence Chataignier"]},
       {type: "T", date: new Date("08FEB20"), heure: "à 15h",         lieu: ["Parc Exflora"]},
+
+
       {type: "T", date: new Date("10FEB20"), heure: "à 17h30",       lieu: ["Résidence Les Tilleuls"]},
       {type: "T", date: new Date("11FEB20"), heure: "à 17h30",       lieu: ["Résidence St Claude"]},
+      {type: "T", date: new Date("13FEB20"), heure: "à 10h30",       lieu: ["Marché De Gaulle"]},
+      {type: "T", date: new Date("15FEB20"), heure: "à 15h",         lieu: ["Pré des pêcheurs"]},
+
+      {type: "T", date: new Date("17FEB20"), heure: "à 15h",         lieu: ["devant l'Hopital de la Fontonne"]},
+      {type: "T", date: new Date("18FEB20"), heure: "à 7h",          lieu: ["devant la Gare"]},
 
       {type: "R", date: new Date("08FEB20"), heure: "à 18h",         lieu: ["Aux Semboules - contactez Gérard Piel au 06.08.21.76.99"]},
+      {type: "R", date: new Date("12FEB20"), heure: "à 18h30",       lieu: ["au local de campagne - réunion thématique \"Restauration et activité périscolaire\""]},
+      {type: "R", date: new Date("19FEB20"), heure: "à 18h30",       lieu: ["au local de campagne - réunion thématique sur le logement"]},
 
       {type: "I", date: new Date("11JAN20"), heure: "à 11h",        lieu: ["10 rue Pasteur", "à Antibes"]},
       {type: "V", date: new Date("31JAN20"), heure: "de 18h",       lieu: [],                         type1: "Fin des inscriptions sur les listes électorales"},
