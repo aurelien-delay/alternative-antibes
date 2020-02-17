@@ -52,7 +52,9 @@ export class AgendacontentService {
       {type: "T", date: new Date("15FEB20"), heure: "à 15h",         lieu: ["Pré des pêcheurs"]},
 
       {type: "T", date: new Date("17FEB20"), heure: "à 15h",         lieu: ["devant l'Hopital de la Fontonne"]},
-      {type: "T", date: new Date("18FEB20"), heure: "à 7h",          lieu: ["devant la Gare"]},
+      
+      {type: "T", date: new Date("21FEB20"), heure: "à 7h",          lieu: ["devant la Gare"]},
+      {type: "T", date: new Date("24FEB20"), heure: "à 17h30",       lieu: ["Résidence St Claude"]},
 
       {type: "R", date: new Date("08FEB20"), heure: "à 18h",         lieu: ["Aux Semboules - contactez Gérard Piel au 06.08.21.76.99"]},
       {type: "R", date: new Date("12FEB20"), heure: "à 18h30",       lieu: ["au local de campagne - réunion thématique \"Restauration et activité périscolaire\""]},
