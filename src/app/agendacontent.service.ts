@@ -56,6 +56,15 @@ export class AgendacontentService {
       {type: "T", date: new Date("21FEB20"), heure: "à 7h",          lieu: ["devant la Gare"]},
       {type: "T", date: new Date("24FEB20"), heure: "à 17h30",       lieu: ["Résidence St Claude"]},
 
+      {type: "T", date: new Date("26FEB20"), heure: "à 18h",         lieu: ["Débat Nice Matin - aux espaces Fort Carré"]},
+      {type: "T", date: new Date("28FEB20"), heure: "à 17h30",       lieu: ["Cité SNCF"]},
+      {type: "T", date: new Date("29FEB20"), heure: "à 10h30 et 15h",lieu: ["Vieille ville"]},
+      {type: "T", date: new Date("01MAR20"), heure: "à 10h30",       lieu: ["Bord de mer ouvert aux piétons et cyclistes"]},
+      {type: "T", date: new Date("02MAR20"), heure: "à 17h30",       lieu: ["Résidence Laval Laeticia"]},
+      {type: "T", date: new Date("03MAR20"), heure: "à 17h30",       lieu: ["Résidence Pont du Lys"]},
+
+      {type: "R", date: new Date("04MAR20"), heure: "à 18h30",       lieu: ["au local de campagne - réunion thématique sur le droit des femmes"]},
+
       {type: "R", date: new Date("08FEB20"), heure: "à 18h",         lieu: ["Aux Semboules - contactez Gérard Piel au 06.08.21.76.99"]},
       {type: "R", date: new Date("12FEB20"), heure: "à 18h30",       lieu: ["au local de campagne - réunion thématique \"Restauration et activité périscolaire\""]},
       {type: "R", date: new Date("19FEB20"), heure: "à 18h30",       lieu: ["au local de campagne - réunion thématique sur le logement"]},
