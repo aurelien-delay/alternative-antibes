@@ -24,13 +24,16 @@
         Nous sommes l’Alternative sociale, citoyenne, écologique pour Antibes Juan-les-Pins.
       </div>
     </div>
-    <!-- portraits TODO -->
+    <!-- portraits -->
     <div class="portraits">
-      <div *ngFor="let candidat of tetesdeliste">
+      <div *ngFor="let candidat of candidats">
         <app-candidat [candidat]=candidat></app-candidat>
       </div>
-      
     </div>
+    <div class="restecandidats">
+      <h1><a href="candidats">Tous nos candidats...</a></h1>
+    </div>
+    
     <div class="pourquoi surencadré vert">
       <h1>Pourquoi présenter une liste aux Municipales 2020 ?</h1>
       <div class="">

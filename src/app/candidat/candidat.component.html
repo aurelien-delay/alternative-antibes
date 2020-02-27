@@ -1,10 +1,11 @@
-<div class="candidat">
-  <div class="photo">
+<div class="candidat" [ngClass]="{'nophoto': candidat.hasphoto==false}">
+  <div class="photo" *ngIf="candidat.hasphoto">
     <img src={{photo}}>
   </div>
   <div class="prenom resize"><span>{{candidat.prenom}}</span></div>
+  <div class="numero"><span>{{candidat.numero}}</span></div>
   <div class="nom resize"><span>{{candidat.nom}}</span></div>
   <div class="role">{{candidat.role}}</div>
   <div class="profession">{{candidat.profession}}</div>
-  <div class="phrase">{{candidat.phrase}}</div>
+  <div class="phrase" *ngIf="candidat.phrase">{{candidat.phrase}}</div>
 </div>

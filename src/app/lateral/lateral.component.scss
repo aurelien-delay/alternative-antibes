@@ -32,7 +32,16 @@ $orange: #ff8200;
     color: $vert;
   }
 
-  .directlink {
-    color: white;
+  .directlink { color: white; }
+  .linkprogramme {
+    font-size: 160%;
+    color: $rouge;
+    font-family: yellowtailregular;
+    p:before {
+      content: "▶";
+      padding-right: 8px;
+      font-size: 2rem;
+      vertical-align: middle;
+    }
   }
 }

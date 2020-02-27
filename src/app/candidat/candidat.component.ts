@@ -12,19 +12,20 @@ export class CandidatComponent implements OnInit {
 
   constructor() { }
   photo: string;
+  hasphoto: boolean;
 
   ngOnInit() {
     this.photo = "assets/candidats/" + this.candidat.prenom + this.candidat.nom + ".png";
   }
 
   ngAfterViewInit() {
-    console.log("after init");
-    // this.autoSizeText();
+    // console.log("after init");
+    this.autoSizeText();
   }
 
   autoSizeText() {
     let elements = $('.resize')
-    console.log(elements)
+    // console.log(elements)
     if (elements.length < 0) return;
 
     /*
@@ -47,7 +48,7 @@ export class CandidatComponent implements OnInit {
     });
     */
     elements.each( function(index, el) {
-      console.log("el", el.innerText, el.scrollHeight, el.offsetHeight, $(el).find("span").text() );
+      // console.log("el", el.innerText, el.scrollHeight, el.offsetHeight, $(el).find("span").text() );
       // if ( $(el).find("span").text() === "Delcasse") { $(el).find("span").text("Superlongaraloange"); }
       let resizeText = function() {
         let elNewFontSize = (parseInt($(el).css('font-size').slice(0, -2)) - 1) + 'px'
@@ -56,11 +57,11 @@ export class CandidatComponent implements OnInit {
 
       let actualTextSize = parseInt($(el).find("span").css("width"));
       while (el.scrollHeight > el.offsetHeight || actualTextSize > el.offsetWidth) {
-        console.log("resize again", el.scrollHeight, el.offsetHeight, actualTextSize, el.offsetWidth);
+        // console.log("resize again", el.scrollHeight, el.offsetHeight, actualTextSize, el.offsetWidth);
         resizeText();
         actualTextSize = parseInt($(el).find("span").css("width"));
       }
-      console.log("end resizing", el.scrollHeight, el.offsetHeight, actualTextSize, el.offsetWidth);
+      // console.log("end resizing", el.scrollHeight, el.offsetHeight, actualTextSize, el.offsetWidth);
     });
   }
 }

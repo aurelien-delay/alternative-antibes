@@ -206,3 +206,19 @@ form {
 
 .bold { font-weight: bold; }
 .avoidwrap { display: inline-block; }
+
+
+.portraits {
+  padding: 10px 50px;
+  div { padding: unset; }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  @media (max-width: 1361px) { grid-template-columns: 1fr; padding: 10px 20px; }
+  grid-template-rows: auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  justify-items: center;
+  align-items: start;
+  max-width: 2000px;
+  margin: auto;
+}

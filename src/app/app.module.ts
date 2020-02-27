@@ -21,6 +21,8 @@ import { PlanveloComponent } from './planvelo/planvelo.component';
 import { SituationEnvibusComponent } from './situation-envibus/situation-envibus.component';
 import { SoutienMouvementSocialComponent } from './soutien-mouvement-social/soutien-mouvement-social.component';
 import { FonctionpubliqueComponent } from './fonctionpublique/fonctionpublique.component';
+import { CantinesscolairesComponent } from './cantinesscolaires/cantinesscolaires.component';
+import { CandidatsComponent } from './candidats/candidats.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { FonctionpubliqueComponent } from './fonctionpublique/fonctionpublique.c
     PlanveloComponent,
     SituationEnvibusComponent,
     SoutienMouvementSocialComponent,
-    FonctionpubliqueComponent
+    FonctionpubliqueComponent,
+    CantinesscolairesComponent,
+    CandidatsComponent
   ],
   imports: [
     BrowserModule,

@@ -11,15 +11,15 @@ $orange: #ff8200;
   padding: unset;
   div { padding: unset; }
   display: grid;
-  grid-template-columns: 150px auto;
+  grid-template-columns: 150px auto auto;
   grid-template-rows: 10px 70px 70px auto auto auto;
-  grid-template-areas: 
-  "photo blabla"
-  "photo prenom"
-  "photo nom"
-  "role role"
-  "profession profession"
-  "phrase phrase";
+  grid-template-areas:
+  "photo blabla numero"
+  "photo prenom prenom"
+  "photo nom nom"
+  "role role role"
+  "profession profession profession"
+  "phrase phrase phrase";
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   justify-items: center;
@@ -39,6 +39,7 @@ $orange: #ff8200;
   .role { grid-area: role; }
   .profession { grid-area: profession; }
   .phrase { grid-area: phrase; text-align: justify;}
+  .numero { grid-area: numero; text-align: right; }
 
   .prenom { font-family: yellowtailregular; font-size: 3rem; color: $rouge;}
   @media (max-width: 424px) { .prenom { font-size: 2rem; } }
@@ -65,6 +66,12 @@ $orange: #ff8200;
       height: 40px !important;
     }
   }
+  .numero {
+    &::before{content:"#";}
+    color: $rouge;
+    font-size: 2rem; 
+  }
+  @media (max-width: 424px) { .numero { font-size: 1.5rem; } }
   .role { text-transform: uppercase; font-size: 1.5rem; color: $rouge; font-weight: bold;}
   @media (max-width: 424px) { .role { font-size: 1rem; } }
   .profession { white-space: pre; font-size: 1rem; font-weight: bold;}
@@ -76,7 +83,7 @@ $orange: #ff8200;
   }
   
  
-  .photo img { 
+  .photo img {
     width: 150px;
     height:150px;
     // circle crop around the photo
@@ -87,5 +94,22 @@ $orange: #ff8200;
       width: 100px;
       height:100px;
     }
+  }
+
+  // s'il n'y a pas de photo
+  &.nophoto {
+    grid-template-areas:
+    "blabla blabla numero"
+    "prenom prenom prenom"
+    "nom nom nom"
+    "role role role"
+    "profession profession profession"
+    "phrase phrase phrase";
+
+    .nom { margin-left: unset;  width: 100% !important; span: { padding: unset; } }
+    .nom, .prenom { justify-self: center;}
+    //     background: $rouge;
+    // span { vertical-align: middle; padding: 10px 0px 10px 60px;}
+
   }
 }

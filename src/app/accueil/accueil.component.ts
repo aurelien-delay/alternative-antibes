@@ -10,9 +10,9 @@ import { ListecandidatsService } from '../listecandidats.service'
 })
 export class AccueilComponent implements OnInit {
   constructor(private apiService: ApiService, private listecandidatsService: ListecandidatsService) {}
-  tetesdeliste: Array<Object>;
+  candidats: Array<Object>;
 
   ngOnInit() {
-    this.tetesdeliste = this.listecandidatsService.getTetesDeListe();
+    this.candidats = this.listecandidatsService.getTetesDeListe();
   }
 }

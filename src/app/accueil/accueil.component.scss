@@ -35,20 +35,17 @@ $orange: #ff8200;
     }
     margin-top: 40px;
   }
-
-  .portraits {
-    padding: 10px 50px;
-    div { padding: unset; }
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    @media (max-width: 1361px) { grid-template-columns: 1fr; padding: 10px 20px; }
-    grid-template-rows: auto;
-    grid-column-gap: 30px;
-    grid-row-gap: 50px;
-    justify-items: center;
-    align-items: center;
-    max-width: 2000px;
-    margin: auto;
+  .portraits { div { padding: unset; } }
+  .restecandidats {
+    h1 {font-size: 4rem;}
+    a:hover { text-decoration: none; font-weight: bold; }
+    a { text-decoration: none; font-weight: normal; color: inherit; }
+    a:before {
+      content: "▶";
+      padding-right: 8px;
+      font-size: 2rem;
+      vertical-align: middle;      
+    }
   }
 }
 
