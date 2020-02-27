@@ -23,6 +23,7 @@ import { SoutienMouvementSocialComponent } from './soutien-mouvement-social/sout
 import { FonctionpubliqueComponent } from './fonctionpublique/fonctionpublique.component';
 import { CantinesscolairesComponent } from './cantinesscolaires/cantinesscolaires.component';
 import { CandidatsComponent } from './candidats/candidats.component';
+import { AssaEscaladeComponent } from './assa-escalade/assa-escalade.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { CandidatsComponent } from './candidats/candidats.component';
     SoutienMouvementSocialComponent,
     FonctionpubliqueComponent,
     CantinesscolairesComponent,
-    CandidatsComponent
+    CandidatsComponent,
+    AssaEscaladeComponent
   ],
   imports: [
     BrowserModule,
