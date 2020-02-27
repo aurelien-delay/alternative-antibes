@@ -5,8 +5,12 @@ $violet: #926ebf;
 $bleu: #009ec0;
 $orange: #ff8200;
 
+.cadrecandidat .candidat {
+  width:100%;
+}
+
 .candidat {
-  max-width: 400px;
+  width: 400px;
 
   padding: unset;
   div { padding: unset; }
@@ -106,7 +110,7 @@ $orange: #ff8200;
     "profession profession profession"
     "phrase phrase phrase";
 
-    .nom { margin-left: unset;  width: 100% !important; span: { padding: unset; } }
-    .nom, .prenom { justify-self: center;}
+    .nom { margin-left: unset;  width: 100% !important; span { padding: unset; } }
+    .nom, .prenom { justify-self: center; text-align: center; }
   }
 }

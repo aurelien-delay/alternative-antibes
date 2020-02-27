@@ -1,7 +1,7 @@
 <div class="candidats">
   <div class="portraits">
-    <div *ngFor="let candidat of candidats">
-      <div><app-candidat [candidat]=candidat></app-candidat></div>
+    <div *ngFor="let candidat of candidats" ngclass="cadrecandidat">
+      <app-candidat [candidat]=candidat></app-candidat>
     </div>
   </div>
 </div>
