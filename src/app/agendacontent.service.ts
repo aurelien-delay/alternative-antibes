@@ -64,6 +64,16 @@ export class AgendacontentService {
       {type: "T", date: new Date("03MAR20"), heure: "à 17h30",       lieu: ["Résidence Pont du Lys"]},
 
       {type: "R", date: new Date("04MAR20"), heure: "à 18h30",       lieu: ["au local de campagne - réunion thématique sur le droit des femmes"]},
+      {type: "T", date: new Date("06MAR20"), heure: "à 17h30",       lieu: ["Résidence les Oliviers"]},
+      {type: "T", date: new Date("07MAR20"), heure: "à 10h",         lieu: ["Vieille ville"]},
+      {type: "T", date: new Date("07MAR20"), heure: "à 16h",         lieu: ["Résidences les Grenadines et l'Amarante"]},
+      {type: "T", date: new Date("08MAR20"), heure: "à 9h",          lieu: ["Egalité Femme/Homme : On rebaptise les noms de rues !"]},
+      {type: "T", date: new Date("09MAR20"), heure: "à 6h",          lieu: ["Usine Legrand et dépot Envibus"]},
+      {type: "T", date: new Date("09MAR20"), heure: "à 17h30",       lieu: ["Résidences du Val Claret"]},
+      {type: "T", date: new Date("10MAR20"), heure: "à 6h30",        lieu: ["La Poste Jules Grec"]},
+      {type: "T", date: new Date("10MAR20"), heure: "à 17h30",       lieu: ["Résidence La Tournière"]},
+      {type: "T", date: new Date("12MAR20"), heure: "à 4h",          lieu: ["Déchetterie Envinet"]},
+      {type: "T", date: new Date("12MAR20"), heure: "à 10h",         lieu: ["Marché Charles de Gaulle"]},
 
       {type: "R", date: new Date("08FEB20"), heure: "à 18h",         lieu: ["Aux Semboules - contactez Gérard Piel au 06.08.21.76.99"]},
       {type: "R", date: new Date("12FEB20"), heure: "à 18h30",       lieu: ["au local de campagne - réunion thématique \"Restauration et activité périscolaire\""]},

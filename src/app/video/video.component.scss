@@ -1,0 +1,21 @@
+.videopage {
+  width: 1400px;
+  @media (max-width: 1450px) { width: 700px; }
+  max-width: 80%;
+  margin: auto;
+  .video {
+    width: fit-content;
+    margin: auto;
+    padding-bottom: 5rem;
+  
+    .videoframe {
+      // width: 560px; height: 315px;
+      width: 100rem;
+      max-width: 100%;
+      height: 75rem;
+      @media (max-width: 1450px) { height: 40rem; }
+      @media (max-width: 1023px) { height: 25rem; }
+      @media (max-width:  700px) { height: 20rem; }
+    }
+  }
+}

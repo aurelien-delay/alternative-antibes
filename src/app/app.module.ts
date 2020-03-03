@@ -24,6 +24,7 @@ import { FonctionpubliqueComponent } from './fonctionpublique/fonctionpublique.c
 import { CantinesscolairesComponent } from './cantinesscolaires/cantinesscolaires.component';
 import { CandidatsComponent } from './candidats/candidats.component';
 import { AssaEscaladeComponent } from './assa-escalade/assa-escalade.component';
+import { VideoComponent } from './video/video.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { AssaEscaladeComponent } from './assa-escalade/assa-escalade.component';
     FonctionpubliqueComponent,
     CantinesscolairesComponent,
     CandidatsComponent,
-    AssaEscaladeComponent
+    AssaEscaladeComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,

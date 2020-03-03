@@ -13,6 +13,7 @@ import { SoutienMouvementSocialComponent } from './soutien-mouvement-social/sout
 import { CantinesscolairesComponent } from './cantinesscolaires/cantinesscolaires.component';
 import { CandidatsComponent } from './candidats/candidats.component';
 import { AssaEscaladeComponent } from './assa-escalade/assa-escalade.component';
+import { VideoComponent } from './video/video.component';
 
 const routes: Routes = [
   { path: '', component: AccueilComponent, },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'cantines-scolaires', component: CantinesscolairesComponent, },
   { path: 'candidats', component: CandidatsComponent, },
   { path: 'assa-escalade', component: AssaEscaladeComponent, },
+  { path: 'video', component: VideoComponent, },
   { path: '**', redirectTo: '', },
 ];
 
